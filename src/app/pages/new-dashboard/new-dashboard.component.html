@@ -1,0 +1,130 @@
+<div id="sidebar-mini" class="app sidebar-mini rtl">
+  <div id="global-loader" ></div>
+  <div class="page">
+    <div class="page-main">
+    <!-- Sidebar menu-->
+      <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+      <aside class="app-sidebar">
+        <div class="sidebar-img">
+          <a class="navbar-brand" href="#" routerLink="/dashboard">
+            <img alt="..." class="navbar-brand-img main-logo" src="assets/media/logos/full-logo.png">
+            <img alt="..." class="navbar-brand-img logo" src="assets/media/logos/my-logo.png">
+          </a>
+          <ul class="side-menu">
+            <li class="slide">
+              <a class="side-menu__item active" data-toggle="slide"  routerLink="/dashboard">
+                  <span class="side-menu__icon">
+                    <img class="sidebar-icon-dimensions1" src="assets/media/home.png" alt="">
+                  </span>
+                <span class="side-menu__label">Dashboard</span>
+              </a>
+            </li>
+            <li class="slide">
+              <a class="side-menu__item" data-toggle="slide"   routerLink="/online_reviews">
+                  <span class="side-menu__icon">
+                    <img class="sidebar-icon-dimensions2" src="assets/media/star.png" alt="">
+                  </span>
+                <span class="side-menu__label">Online reviews</span>
+              </a>
+            </li>
+            <li class="slide">
+              <a class="side-menu__item" data-toggle="slide" routerLink="/connections">
+                  <span class="side-menu__icon">
+                    <img class="sidebar-icon-dimensions3" src="assets/media/message-square.png" alt="">
+                  </span>
+                <span class="side-menu__label">Connections</span>
+              </a>
+            </li>
+            <li class="slide">
+              <a class="side-menu__item" data-toggle="slide" routerLink="/requests_sent">
+                  <span class="side-menu__icon">
+                    <img class="sidebar-icon-dimensions7" src="assets/media/star-envelope.png" alt="">
+                  </span>
+                <span class="side-menu__label">Review requests</span>
+              </a>
+            </li>
+            <li class="slide">
+              <a class="side-menu__item" data-toggle="slide" routerLink="/appointments">
+                <i class="side-menu__icon fas fa-laptop"></i>
+                <span class="side-menu__label">Appointment Scheduling</span>
+              </a>
+            </li>
+            <li class="slide">
+              <a class="side-menu__item" data-toggle="slide" routerLink="/customers">
+                  <span class="side-menu__icon">
+                    <img class="sidebar-icon-dimensions4" src="assets/media/user.png" alt="">
+                  </span>
+                <span class="side-menu__label">Customers</span>
+              </a>
+            </li>
+            <li class="slide">
+              <a class="side-menu__item" data-toggle="slide" routerLink="/form_builder">
+                  <span class="side-menu__icon">
+                    <img class="sidebar-icon-dimensions5" src="assets/media/file-text.png" alt="">
+                  </span>
+                <span class="side-menu__label">Form Builder</span>
+              </a>
+            </li>
+            <li class="slide">
+              <a class="side-menu__item" data-toggle="slide" routerLink="/settings">
+                  <span class="side-menu__icon">
+                    <img class="sidebar-icon-dimensions6" src="assets/media/settings.png" alt="">
+                  </span>
+                <span class="side-menu__label">Settings</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+
+      <div class="app-content" id="app-content" style="background: #F4F6FB;">
+        <div class="side-app">
+          <div class="main-content">
+            <!-- Top navbar -->
+            <div class="padding-left-right-top">
+              <nav class="navbar navbar-expand-lg navbar-light py-3 sticky-top nav-style" id="navbarSide">
+                <!--              navbar-main-->
+<!--                <button type="button" class="navbar-toggler navbar-toggler-right" onclick="openNav()" id="openButton"><i class="fa fa-align-right" aria-hidden="true"></i></button>-->
+<!--                <button type="button" class="navbar-toggler navbar-toggler-right" onclick="closeNav()" id="closeButton"><i class="fa fa-align-right" aria-hidden="true"></i></button>-->
+                <a aria-label="Hide Sidebar" class="app-sidebar__toggle open-close-sidebar" data-toggle="sidebar" id="open-close-sidebar"><i class="fa fa-align-right" aria-hidden="true"></i></a>
+                <div class="container-fluid container-flex-opt">
+                  <div class="icon ml-auto d-md-flex">
+                    <div class="d-flex my-auto">
+                      <a href="" class="dropdown-toggle" id="dropdownMenuIcon" data-toggle="dropdown" aria-haspopup="true"
+                         aria-expanded="false"><img src="assets/media/avatardp.png" alt="" style="height: 36px;width: 36px"></a>
+                      <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right" aria-labelledby="dropdownMenuIcon">
+                        <a class="dropdown-item text-muted dropdown-header" disabled>Welcome!</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item logoutTab" (click)="logout()">Logout</a>
+                      </div>
+                    </div>
+                    <div class="img-hide d-xs-none d-md-flex">
+                      <p class="text-capitalize my-auto px-2 user-name"><b>{{userName}}</b></p>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <!-- Top navbar -->
+            <div class="container-fluid pt-8" id="main-content-inner">
+              <app-homepage *ngIf="currentRoute == '/dashboard' && currentRoute == ''"></app-homepage>
+              <router-outlet></router-outlet>
+            </div>
+            <!-- Footer -->
+            <footer class="footer">
+              <div class="row align-items-center justify-content-xl-between">
+                <div class="col-12">
+                  <div class="copyright text-center text-muted">
+                    <p class="text-sm font-weight-500">Copyright © 2020 Heroes Of Digital</p>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Sidebar menu-->

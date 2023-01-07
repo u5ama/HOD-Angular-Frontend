@@ -1,0 +1,262 @@
+
+/*
+   server-side-angular-way.component.css
+*/
+.no-data-available {
+  text-align: center;
+}
+
+/*
+   src/styles.css (i.e. your global style)
+*/
+table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover{
+  background: #ffffff;
+}
+.dataTables_empty {
+  display: none;
+}
+.rating {
+  background-color: transparent;
+  background-image:  url("../../../../assets/media/rating/rating.png");
+  background-position: 80px top;
+  display: inline-block;
+  height: 15px;
+  line-height: 15px;
+  margin-top: 3px;
+  overflow: hidden;
+  width: 80px;
+  text-align:left;
+}
+.rating .rating-value {
+  background-color: transparent;
+  background-image: url("../../../../assets/media/rating/rating.png");
+  background-position: 0 top;
+  display: inline-block;
+  height: 15px;
+  line-height: 15px;
+  overflow: hidden;
+  width: 80px;
+}
+.site-label {
+  display: flex;
+  align-items: center;
+  width: 97px;
+  background-color: #EBF2FA;
+  border-radius: 30px;
+  padding: 4px 0 4px 4px;
+}
+.site-label-fb {
+  display: flex;
+  align-items: center;
+  width: 135px;
+  background-color: #EBF2FA;
+  border-radius: 30px;
+  padding: 4px 0 4px 4px;
+}
+.inprogress {
+  background: #ffdd65;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 25px;
+  margin: 0 10px;
+}
+
+ .notrespond {
+  background: #ff4545;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 25px;
+  margin: 0 10px;
+}
+.see-more{
+  color: #005cbf;
+  cursor: pointer;
+}
+.head-search-review {
+  position: relative;
+}
+.head-search-review:before {
+  font-family: FontAwesome;
+  content: "\f002";
+  color: #CFCFD3;
+  position: absolute;
+  font-size: 16px;
+  width: 20px;
+  height: 20px;
+  top: 8px;
+  right: 10px;
+  z-index: 1;
+}
+.head-search-review .form-control {
+  border: 1px solid #a6a7af;
+  border-radius: 3px;
+}
+.form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+}
+.form-control {
+  background-color: #ffffff;
+  border: 1px solid #e4e7ea;
+  box-shadow: none;
+  border-radius: 0px;
+  color: #565656;
+  height: 38px;
+  max-width: 100%;
+  padding: 7px 12px;
+  transition: all 300ms linear 0s;
+}
+.btn-review-site {
+  float: right;
+  font-size: 15px;
+  background: #F1605B !important;
+  font-weight: 600;
+  padding: 8px 20px;
+  border: 1px solid #F1605B;
+  color: white;
+}
+.btn {
+  border-radius: 3px;
+}
+.fa-star{
+  color: #F6B91B;
+  font-size: 10px;
+}
+
+/*/////////////////////////*/
+/*///Table Styling/////////*/
+/*////////////////////////*/
+
+.table thead th{
+  padding: 25px 18px;
+  border-bottom-color:#ccc;
+}
+.tbl-body td{
+  padding: 35px 18px;
+}
+.dropdown-item{
+  padding: .25rem  0;
+}
+
+@media screen and (max-width: 1060px){
+  .btn-font{
+    font-size: 14px;
+  }
+  .form-control{
+    height: 35px;
+  }
+  .head-search-review:before {
+    top: 5px;
+  }
+  .btn-review-site {
+    font-size: 13px;
+  }
+  .small-screen-size{
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .btn-font{
+    font-size: 13px;
+  }
+  .form-control{
+    height: 33px;
+  }
+  .tbl-body td{
+    padding: 25px 18px;
+  }
+}
+@media screen and (max-width: 991px){
+  .btn-font{
+    font-size: 12px;
+  }
+  .form-control{
+    width: 77%;
+    height: 32px;
+  }
+  .head-search-review:before{
+    top: 4px;
+  }
+  .btn-review-site{
+    font-size: 12px;
+  }
+  .td-font-size{
+    font-size: 14px;
+  }
+  .head-search-review:before{
+    left: 71%;
+  }
+  .md-float-right{
+    float: right;
+  }
+}
+@media screen and (max-width: 830px){
+  .site-label {
+    padding: 2px 0 2px 2px;
+  }
+  .td-font-size{
+    font-size: 14px;
+  }
+  .btn-font{
+    font-size: 0.7rem;
+  }
+  .table thead th{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .tbl-body td{
+    padding: 20px 8px;
+  }
+  .form-control{
+    height: 31px;
+  }
+  .head-search-review:before{
+    top: 3px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .head-search-review:before{
+    left: 70%;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .small-screen-size{
+    font-size: 1.5rem;
+  }
+  .btn-review-site{
+    font-size: 10px;
+  }
+  .btn{
+    padding: .375rem .5rem;
+  }
+  .form-control{
+    font-size: 12px;
+  }
+  .head-search-review:before {
+      font-size: 12px;
+      top: 7px;
+  }
+  .head-search-review:before{
+    left: 70%;
+  }
+}
+
+@media screen and (max-width: 360px){
+  .head-search-review:before{
+    left: 68%;
+  }
+}
+
+/*/////////////////////////*/
+/*///Table Styling End/////////*/
+/*////////////////////////*/
+.custom-control {
+  padding-bottom: 5px;
+}

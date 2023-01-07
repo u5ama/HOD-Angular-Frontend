@@ -1,0 +1,179 @@
+<div class="limiter bg-white">
+
+  <div class="text-center py-3 border-bottom">
+    <img style="max-width: 150px;" src="./assets/media/logos/full-logo.png"/>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-md-8 col-sm-12 mx-auto py-5">
+        <form class="form-horizontal validate-me new-lg-form" [formGroup]="registerForm" autocomplete="off">
+          <div *ngIf="hideTitle">
+            <h2 class="login-heading">Let's Create Your Account</h2>
+            <h5 class="mb-4 login-subheading">Already have a HOD account?
+              <a href="javascript:;" routerLink="/auth/login" class="default-color text-underline">Sign In</a></h5>
+          </div>
+          <app-auth-notice></app-auth-notice>
+          <div class="form-group business-section mb-3">
+            <div class="practice-container" *ngIf="businessDiv">
+              <div class="putin">
+                <h6 class="dark-color m-0 font-14"><label for="practice-name">Business Name *</label></h6>
+                <input type="text" class="input-field input form-control" [options]='options'
+                       (setAddress)="getAddress($event)" (change)="onChange()" id="autocomplete" angularGooglePlace
+                       id="practice-name" placeholder="Your Business Name" value="" data-required="true"
+                       autocomplete="off" formControlName="business_name"/>
+                <mat-error *ngIf="isControlHasError('business_name','required')">
+                  <strong>Required* </strong>
+                </mat-error>
+                <mat-error *ngIf="isControlHasError('business_name','minlength')">
+                  <strong>minimum field length is 3</strong>
+                </mat-error>
+                <mat-error *ngIf="isControlHasError('business_name','maxlength')">
+                  <strong>maximum field length is 100</strong>
+                </mat-error>
+                <input type="hidden" id="business-address" name="address" placeholder="" value="">
+                <span class="help-block hide-me"><small></small></span>
+              </div>
+            </div>
+
+            <div class="business-selected-box" *ngIf="businessBox">
+              <div class="selected-business">
+                <a href="javascript:void(0);" class="close-me" (click)="onCross()">x</a>
+                <span class="item-query"><span class="pac-matched">{{businessName}}</span></span>
+                <span class="address-detail">{{fullAddress}}</span>
+              </div>
+            </div>
+            <div class="manual-business-box" *ngIf="manualBussiness">
+              <div class="manual-add-business"><span class="item-query"
+                                                     style="display: inline-block;font-weight: 400;font-size: 14px;color: #7c889c !important;"><span
+                (click)="onManualClick()" class="pac-matched">Can't find your business?</span></span>
+                Add your business manually
+              </div>
+            </div>
+            <input type="hidden" class="business-discovery-status" name="practice_status" id="practice-status"
+                   value="manual"/>
+          </div>
+
+          <div class="form-group">
+            <div class="optional-section" *ngIf="manualBox">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="putin">
+                    <h6 class="dark-color m-0 font-14"><label for="website">Website URL *</label></h6>
+                    <input type="text" class="input-field input form-control" id="website" name="manualWebsite"
+                           formControlName="manualWebsite" placeholder="Website Url">
+                    <span class="help-block hide-me"><small></small></span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="putin">
+                    <h6 class="dark-color m-0 font-14"><label for="phone">Phone Number *</label></h6>
+                    <input type="text" class="input-field input form-control" id="phone" name="manualPhone"
+                           formControlName="manualPhone" placeholder="Your Phone Number">
+                    <span class="help-block hide-me"><small></small></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <h6 class="dark-color m-0 font-14"><label for="first-name">First Name *</label></h6>
+              <input type="text" class="input-field input form-control" id="first-name" formControlName="firstname"
+                     value="" placeholder="Your First Name" data-required="true">
+              <mat-error *ngIf="isControlHasError('firstname','required')">
+                <strong>Required* </strong>
+              </mat-error>
+              <mat-error *ngIf="isControlHasError('firstname','minlength')">
+                <strong>minimum field length is 3</strong>
+              </mat-error>
+              <mat-error *ngIf="isControlHasError('firstname','maxlength')">
+                <strong>maximum field length is 100</strong>
+              </mat-error>
+              <span class="help-block hide-me"><small></small></span>
+            </div>
+            <div class="mb-3">
+              <h6 class="dark-color m-0 font-14"><label for="last-name">Last Name *</label></h6>
+              <input type="text" class="input-field input form-control" id="last-name" formControlName="lastname"
+                     value="" placeholder="Your Last Name" data-required="true"/>
+              <mat-error *ngIf="isControlHasError('lastname','required')">
+                <strong>Required* </strong>
+              </mat-error>
+              <mat-error *ngIf="isControlHasError('lastname','minlength')">
+                <strong>minimum field length is 3</strong>
+              </mat-error>
+              <mat-error *ngIf="isControlHasError('lastname','maxlength')">
+                <strong>maximum field length is 100</strong>
+              </mat-error>
+              <span class="help-block hide-me"><small></small></span>
+            </div>
+
+            <div class="mb-3">
+              <h6 class="dark-color m-0 font-14"><label for="email">Work Email *</label></h6>
+              <input class="input" type="email" formControlName="email" autocomplete="off" placeholder="you@company.com"
+                     id="email" data-required="true">
+              <mat-error *ngIf="isControlHasError('email','required')">
+                <strong>Required* </strong>
+              </mat-error>
+              <mat-error *ngIf="isControlHasError('email','email')">
+                <strong>invalid field</strong>
+              </mat-error>
+              <mat-error *ngIf="isControlHasError('email','minlength')">
+                <strong>minimum field length is 3</strong>
+              </mat-error>
+              <mat-error *ngIf="isControlHasError('email','maxlength')">
+                <strong>maximum field length is 100</strong>
+              </mat-error>
+              <span class="help-block hide-me"><small></small></span>
+            </div>
+
+            <div class="">
+              <h6 class="dark-color m-0 font-14"><label for="password">Create a Password *</label></h6>
+              <input class="input" type="password" formControlName="password" autocomplete="off"
+                     placeholder="Enter a strong password" id="password" data-required="true">
+              <mat-error *ngIf="isControlHasError('password','required')">
+                <strong>Required* </strong>
+              </mat-error>
+              <mat-error *ngIf="isControlHasError('password','minlength')">
+                <strong>minimum field length is 3</strong>
+              </mat-error>
+              <mat-error *ngIf="isControlHasError('password','maxlength')">
+                <strong>maximum field length is 100</strong>
+              </mat-error>
+              <span class="help-block hide-me"><small></small></span>
+            </div>
+            <div class="mt-3">
+              <button class="form-submit-btn btn submit full-btn" (click)="submit()" id="kt_login_signin_submit">
+                <span *ngIf="btnText">Create a Account</span>
+                <div class="spinner-border text-warning" role="status" *ngIf="loading">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </button>
+              <div *ngIf="hideTitle">
+                <div class="register-checkbox mb-0 heading-default" style="
+    margin-top: 10px;
+">
+                <span class="txt1">
+                   By creating a account, you agree to our Terms &amp; conditions and Privacy policy
+              </span>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="hideTitle">
+              <div class="text-center pt-2">
+              <span class="txt1">
+                  Forgot
+              </span>
+                <a class="txt2 default-color text-underline" href="javascript:;" routerLink="/auth/forgot-password">
+                  Username / Password?
+                </a>
+              </div>
+            </div>
+            <div class="form-group m-b-0 response-message" style="display: none;margin-top: 10px;">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

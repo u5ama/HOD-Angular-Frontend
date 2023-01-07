@@ -1,0 +1,90 @@
+
+<div class="row m-0 pt-2 pb-5 align-items-center">
+  <div class="col-lg-5 text-lg-left mb-3 mb-lg-0">
+    <h2 class="m-0">Customize Review SMS</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-9">
+    <!-- card 1 -->
+
+    <!-- card 2 -->
+    <div class="card shadow overflow-hidden">
+      <div class="card-header bg-transparent ">
+        <div class="row align-items-center">
+          <div class="col">
+            <h3 class="d-inline m-0">Customize SMS</h3>
+          </div>
+
+        </div>
+      </div>
+      <div class="card-body">
+        <form id="sms_sent_to_user_message_form" action="" method="post">
+          <div class="container">
+            <div class="row mb-3">
+              <div class="col-sm-12 mb-4">
+                <label for="sms_sent_to_user_message_textarea">Message</label>
+                <textarea type="text" id="sms_sent_to_user_message_textarea" class="settings-input form-control w-100 input-form-fields" style="min-height: 140px; max-height: 400px;" [(ngModel)]="smsMessage" name="smsMessage">Hello sample</textarea>
+              </div>
+            </div>
+          </div>
+          <button id="sms_sent_to_user_message_button_submit" type="bitton" (click)="saveMessage()" class="btn btn-green float-right">
+            <i class="fas fa-check"></i>
+            <span>Save</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- card 3 -->
+    <div class="card  shadow overflow-hidden" style="display: none">
+      <div class="card-header bg-transparent ">
+        <div class="row align-items-center">
+          <div class="col">
+            <h3 class="m-0">2. Leave a Review Link</h3>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="container">
+          <div class="row mb-3">
+            <div class="col-sm-12">
+              <label for="rev-1">Review Link #1</label>
+              <input type="text" id="rev-1" class="settings-input form-control w-100" value="http://google.com/">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-8 mx-auto mb-4">
+    <div class="mobile-cont">
+      <div class="inner-mobile">
+
+        <!-- mobile header -->
+        <div class="p-3 border-bottom text-muted">
+          <a>
+            <i class="fas fa-bars"></i>
+          </a>
+        </div>
+        <!-- mobile body -->
+        <div class="mobile-body py-3 px-2">
+          <div class="d-flex mb-3">
+            <img id="mobile_sms_image_preview" class="sms-profile-avatar" [src]="requestImage" alt="" style="display: none;">
+
+            <div class="message sent">
+              <span id="mobile_sms_message_preview">{{smsMessage}}</span>
+              <br>
+              <a href="#.">https://bit.ly/gty52</a>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center my-2 py-2 px-2 border-top justify-content-between">
+          <p class="m-0">Enter message</p>
+          <button type="button" class="btn btn-light-green ">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

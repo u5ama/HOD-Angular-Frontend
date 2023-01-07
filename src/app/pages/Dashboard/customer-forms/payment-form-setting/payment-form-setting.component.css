@@ -1,0 +1,24 @@
+.padding-btn {
+  padding:10px 30px;
+}
+.margin-right-side{
+  margin-right: 25px;
+}
+.h3, h3{
+  font-size: 1.0625rem;
+  font-weight: bold;
+}
+.divider-after:after{
+  content: '';
+  width:  1px;
+  height: 100%;
+  background-color: #999999;
+  position: absolute;
+  top: 0;
+  right: 7px;
+}
+.btn-green{
+  background-color: #00cf00;
+  color: #fff;
+  box-shadow: none;
+}

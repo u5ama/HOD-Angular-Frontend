@@ -1,0 +1,40 @@
+<div class="container-fluid pt-4">
+  <div class="row">
+    <div class="col-12" style="padding: 0 0;">
+      <nav style="padding: 0 15px">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link" id="nav-location-tab" routerLink="/appointment_settings/locations">Location</a>
+          <a class="nav-item nav-link" id="nav-category-tab"  routerLink="/appointment_settings/categories" >Category</a>
+          <a class="nav-item nav-link" id="nav-service-tab" routerLink="/appointment_settings/services" >Service</a>
+          <a class="nav-item nav-link" id="nav-appointment-tab" routerLink="/appointment_settings/appointment-date" >Appointment Date</a>
+          <a class="nav-item nav-link active" id="nav-payment-tab" routerLink="/appointment_settings/payment-script" >Payment Script</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid pt-4">
+  <div class="row">
+    <div class="col-6 mb-4">
+      <h3>Payment Settings</h3>
+    </div>
+  </div>
+  <form [formGroup]="paymentForm" autocomplete="off">
+    <div class="row">
+      <div class="col-md-12 col-lg-12 position-relative">
+        <label for="script"></label>
+        <textarea name="" id="script" cols="30" rows="10" placeholder="Add your script here" class="form-control" formControlName="paymentScript"></textarea>
+        <mat-error *ngIf="isLocationControlHasError('paymentScript','required')">
+          <strong>Required* </strong>
+        </mat-error>
+        <span class="help-block hide-me"><small></small></span>
+      </div>
+    </div>
+    <div class="row pt-3 pb-3">
+      <div class="col-md-6">
+        <button type="button" class="btn btn-green" (click)="addScript()">Add Script</button>
+      </div>
+    </div>
+  </form>
+</div>

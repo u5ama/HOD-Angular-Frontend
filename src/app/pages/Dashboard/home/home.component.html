@@ -1,0 +1,400 @@
+<div class="container-fluid">
+  <div class="row">
+<!--      /*///////////////////////*/-->
+<!--      /********Card One********/-->
+<!--      /*//////////////////////*/-->
+    <div class="col-sm-12 col-md-6 col-xl-3">
+      <div class="card shadow overflow-hidden">
+        <div class="card-body review-card-absolute">
+          <div class="widget">
+            <h3 class="font-bold mb-0">Overall Rating</h3>
+            <div class="rating-heading">
+              <h2 class="display-2 mb-0">{{overAllRating | number:'1.0-1' }}</h2>
+              &nbsp;
+              <span class="rating">
+                <span class="rating-value" [style]="{'width': overAllRating*20 +'%'}"></span>
+              </span>
+            </div>
+          </div>
+          <div class="chart-rating">
+              <app-rating-chart></app-rating-chart>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--    /*///////////////////////*/-->
+<!--    /*///////Card One/////// */-->
+<!--    /*//////////////////////*/-->
+
+    <!--      /*///////////////////////*/-->
+    <!--      /*///////Card Two/////// */-->
+    <!--      /*//////////////////////*/-->
+    <div class="col-xl-6 order-card-1">
+      <div class="card  shadow overflow-hidden">
+        <div class="card-body">
+          <div class="cart-heading-flex">
+            <h3 class="font-bold mb-0">Public Reviews</h3>
+          </div>
+          <div class="d-flex just-con">
+            <div class="d-flex">
+              <div class="just-con-inner d-flex">
+                <p class="mr-3">Total Reviews</p>
+                <h3 class="mb-0 font-bold">
+                  {{publicReviews}}</h3>
+              </div>
+            </div>
+          </div>
+          <div class="review-chart">
+            <app-review-chart></app-review-chart>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--    /*///////////////////////*/-->
+    <!--    /*///////Card Two/////// */-->
+    <!--    /*//////////////////////*/-->
+
+    <!--    /*///////////////////////*/-->
+    <!--    /*///////Card Three/////// */-->
+    <!--    /*//////////////////////*/-->
+     <div class="col-sm-12 col-md-6 col-xl-3">
+       <div class="card shadow">
+         <div class="card-body">
+           <div class="widget">
+             <h3 class="font-bold mb-5">Sentiment Analysis</h3>
+
+             <div class="sent-outer" *ngIf="sentiments >= 90 && sentiments <= 100">
+               <div class="stats-circle">
+                 <div class="half-circle"></div>
+                 <div class="half-circle prog superb" [style.transform]="'rotate(' + '(' + 1.7 * sentiments + ')'+ -220 + 'deg)'"></div>
+               </div>
+               <div class="text-center">
+                 <img src="assets/media/Supurb.png" alt="" class="pateint-sentiment-img">
+                 <h3 class="font-bold mt-2 head-style" style="color: #4AAF57 !important;">Superb!</h3>
+               </div>
+             </div>
+
+             <div class="sent-outer" *ngIf="sentiments >= 75 && sentiments < 90">
+               <div class="stats-circle">
+                 <div class="half-circle"></div>
+                 <div class="half-circle prog good" [style.transform]="'rotate(' + '(' + 1.7 * sentiments + ')'+ -220  + 'deg)'"></div>
+               </div>
+               <div class="text-center">
+                 <img src="assets/media/Good.png" alt="" class="pateint-sentiment-img">
+                 <h3 class="font-bold mt-2 head-style" style="color: #87C04E !important;">Good!</h3>
+               </div>
+             </div>
+
+             <div class="sent-outer" *ngIf="sentiments >= 55 && sentiments < 75">
+               <div class="stats-circle">
+                 <div class="half-circle"></div>
+                 <div class="half-circle prog ok" [style.transform]="'rotate(' + '(' + 1.7 * sentiments + ')'+ -220  + 'deg)'"></div>
+               </div>
+               <div class="text-center">
+                 <img src="assets/media/OK.png" alt="" class="pateint-sentiment-img">
+                 <h3 class="font-bold mt-2 head-style" style="color: #F9EC3F !important;">OK!</h3>
+               </div>
+             </div>
+
+             <div class="sent-outer" *ngIf="sentiments >= 30 && sentiments < 55">
+               <div class="stats-circle">
+                 <div class="half-circle"></div>
+                 <div class="half-circle prog nogood" [style.transform]="'rotate(' + '(' + 1.7 * sentiments + ')'+ -220  + 'deg)'"></div>
+               </div>
+               <div class="text-center">
+                 <img src="assets/media/Not_So_Good.png" alt="" class="pateint-sentiment-img">
+                 <h3 class="font-bold mt-2 head-style" style="color: #F4B538 !important;">Not So Good!</h3>
+               </div>
+             </div>
+
+             <div class="sent-outer" *ngIf="sentiments > 0 && sentiments < 30">
+               <div class="stats-circle">
+                 <div class="half-circle"></div>
+                 <div class="half-circle prog bad" [style.transform]="'rotate(' + '(' + 1.7 * sentiments + ')'+ -220  + 'deg)'"></div>
+               </div>
+               <div class="text-center">
+                 <img src="assets/media/Bad.png" alt="" class="pateint-sentiment-img">
+                 <h3 class="font-bold mt-2 head-style" style="color: #DC3944 !important;">Bad!</h3>
+               </div>
+             </div>
+
+             <div class="sent-outer" *ngIf="sentiments == 0">
+               <div class="stats-circle">
+                 <div class="half-circle"></div>
+                 <div class="half-circle prog no" style="transform: rotate(-220deg);"></div>
+               </div>
+               <div class="text-center">
+                 <img src="assets/media/No_Reviews.png" alt="" class="pateint-sentiment-img">
+                 <h3 class="font-bold mt-2 head-style" style="color: #9B999F !important;">No Reviews!</h3>
+               </div>
+             </div>
+
+             <div class="pateints-satisfaction-box">
+               <div class="d-flex mar-rite">
+                 <h2 class="font-bold text-size">{{sentiments | number:'1.0-1' }}
+                 </h2>
+                 <h4 class="font-bold text-size">%</h4>
+               </div>
+               <div class="text-size">of your clients are satisfied.</div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+    <!--    /*///////////////////////*/-->
+    <!--    /*///////Card Three/////// */-->
+    <!--    /*//////////////////////*/-->
+  </div>
+</div>
+<!--////////////////////////////////////-->
+<!--////////////Card Four//////////////-->
+<!--////////////////////////////////////-->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 col-lg-6 col-xl-3">
+      <div class="card shadow overflow-hidden">
+        <div class="card-body review-card-absolute">
+            <div class="widget row pb-4">
+              <div class="d-flex col-sm-9">
+                <h3 class="font-bold mb-0">Google <br> Adwords</h3>
+              </div>
+              <div class="d-flex rating-heading">
+                <img src="assets/media/googleAdwords.jpg" alt="" style="height: 60px;width: 60px; display: none">
+              </div>
+            </div>
+          <div class="card-success-alert mt-5" style="text-align: center;" *ngIf="notConnectedAds">Google Ads Detected
+            <div class="card-button" style="text-align: center;">
+              <button class="btn btn-info btn-google-ads-green" data-toggle="modal" data-target="#google-ads-oauth">Connect Google Ads</button>
+            </div>
+          </div>
+          <div class="card-success-alert mt-5" style="color: red !important;" *ngIf="notDetectedGoogleAds">Google Ads Not Detected</div>
+
+          <div class="card-success-alert mt-5" style="text-align: center;" *ngIf="connectedGoogleAds">
+            <div class="card-button" style="text-align: center;">
+              <p class="card-success-alert" style="text-align: center;">Google Ads Connected</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--////////////////////////////////////-->
+<!--///////////Card Four///////////////-->
+<!--////////////////////////////////////-->
+
+<!--        /*///////////////////////*/-->
+<!--        /*///////Card Four/////// */-->
+<!--        /*//////////////////////*/-->
+    <div class="col-sm-12 col-md-6 col-xl-3">
+      <div class="card website-audit card-dropdown">
+        <app-widget-loader *ngIf="analyticsLoader"></app-widget-loader>
+        <div class="card-header">
+          <div class="row">
+            <div class="col-6">
+                <h3 class="d-flex">Website Traffic</h3>
+            </div>
+            <div class="col-6 pt-1" *ngIf="viewsGraph">
+              <div class="filter-dropdown float-right">
+                <div class="dropdown pull-right">
+                  <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-right" style="left: 21px">
+                    <li><a href="javascript:void(0)" data-filter-value="all" class="active" (click)="getGoogleAnalyticsData('all')">All Time</a></li>
+                    <li><a href="javascript:void(0)" data-filter-value="week" (click)="getGoogleAnalyticsData('week')">Last 7 Days</a></li>
+                    <li><a href="javascript:void(0)" data-filter-value="day" (click)="getGoogleAnalyticsData('day')">Today</a></li>
+                  </ul>
+                </div>
+            </div>
+            </div>
+          </div>
+          <div class="text-center">
+          <h3 *ngIf="viewsGraph">Page Views</h3><br>
+          <h3 *ngIf="viewsGraph">{{viewsCount}}</h3>
+          </div>
+          <div class="card-body p-0 text-center">
+          <div class="card-source"></div>
+
+          <div class="card-success-alert mt-5" *ngIf="detected">Google Analytics Detected
+            <div class="card-button">
+              <button class="btn btn-info connect-analytics" data-toggle="modal" data-target="#google-analytics-oauth">Add Google Analytics</button>
+            </div>
+          </div>
+          <div class="card-success-alert mt-5" style="color: red !important;" *ngIf="notDetected">Google Analytics Not Detected</div>
+          <div class="google-charts" *ngIf="viewsGraph">
+            <fusioncharts
+              width="100%"
+              height="100%"
+              type="Column2d"
+              [dataSource]="dataSource"
+              style="text-align:center">
+            </fusioncharts>
+          </div>
+          <div class="notifaction-alert insight-alert hide">
+            <span class="dashboard-popover" data-container="body" data-toggle="popover" data-placement="right" data-content=""
+                  style="display: none;" data-original-title="" title="">
+              <i class="fa fa-info"></i>
+            </span>
+            <span class="review-status"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+<!--    ////////////////////////////////-->
+<!--    ///////////Card 5///////////////-->
+<!--    ////////////////////////////////-->
+    <div class="col-sm-12 col-md-6 col-xl-3">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-12">
+              <h3 class="d-flex">Phone Leads</h3>
+            </div>
+          </div>
+        </div>
+      <app-ctm></app-ctm>
+      </div>
+    </div>
+    </div>
+  </div>
+
+
+<!--//////////////////////////////////////////////////////////////////-->
+<!--/////////////////Modal For Card Four google adworks///////////////-->
+<!--//////////////////////////////////////////////////////////////////-->
+<div class="modal fade" id="google-ads-oauth">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="OAuth-modal-body text-center">
+          <div class="auth-logo">
+            <img src="assets/media/googleAdwords.jpg" alt="" style="height: 60px;width: 60px">
+            <h3 class="google-modal-h3">Sign In to Google Adwords</h3>
+          </div>
+          <div class="content">
+            <div>
+              <h4>Select an existing account or connect a new Google Account.</h4>
+            </div>
+            <div>
+              <ul class="list-group list-item-styling">
+                <li class="list-group-item"><i class="fas fa-check mr-2"></i>Track your PPC campaigns from one place</li>
+                <li class="list-group-item"><i class="fas fa-check mr-2"></i>Easily report on the performance of your campaigns</li>
+              </ul>
+            </div>
+            <div class="text-center py-3">
+              <button type="button" (click)="openGoogleAds()" class="btn btn-google-ads-green" data-toggle="modal" data-target="#google-ads-oauth"><i class="fab fa-google mr-2" aria-hidden="true"></i>Sign in to Google Adwords</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myNewAdsModel" id="openAdsModal" #myNewAdsModel [hidden]="true"></button>
+<div class="modal fade" id="myNewAdsModel" role="dialog" data-toggle="modal" data-target="#myNewAdsModel">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Select Google Ads Website</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body modal-padding">
+        <div class="page-panel selected-page" *ngFor="let web of AdsWebs">
+          <div class="row">
+            <div class="col-10">
+              <div class="box">
+                <img class="mr-2" src="assets/media/website.png">
+                <span style="">{{web.name}}</span>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="add-icon mar-top">
+                <a href="javascript:void(0);" class="add-me" (click)="getAdsWebProperty(web.id, web.name, web.refresh_token)"><i class="fa fa-plus"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--//////////////////////////////////////////////////////////////////-->
+<!--////////////////this is google analytics modal///////////////////-->
+<!--//////////////////////////////////////////////////////////////////-->
+
+<div class="modal fade" id="google-analytics-oauth">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+<!--       Modal body -->
+      <div class="modal-body">
+        <div class="OAuth-modal-body text-center">
+          <div class="auth-logo pb-3">
+            <img class="pb-3" src="assets/media/google-analytics.jpg" alt="google-analytics" />
+            <h3 class="google-modal-h3">Sign In to Google Analytics</h3>
+          </div>
+          <div>
+            <h4 class="sign-in-gg">Sign in to your Google Analytics account to authorize Heroes of Digital.
+              Once authorized, you will be able to:
+            </h4>
+            <ul>
+              <li class="view-google">
+                View Google Analytics data related to your website on the Heroes of Digital app.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-group text-center pt-2">
+          <button type="button" (click)="openGoogle()" id="loginGoogleAnalytics" class="btn btn-google-analytics"><i class="fab fa-google mr-2" aria-hidden="true"></i>Sign In to Google Analytics</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--//////////////////////////////////////////////////////////////////-->
+<!--////////////////this is google analytics modal///////////////////-->
+<!--//////////////////////////////////////////////////////////////////-->
+
+
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myNewModel" id="openModal" #myNewModel [hidden]="true"></button>
+<div class="modal fade" id="myNewModel" role="dialog" data-toggle="modal" data-target="#myNewModel">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Select Google Analytics Website</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body modal-padding">
+        <div class="page-panel selected-page" *ngFor="let web of webs">
+          <div class="row">
+            <div class="col-10">
+              <div class="box">
+                <img class="mr-2" src="assets/media/website.png">
+                <span style="">{{web.name}}</span>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="add-icon mar-top">
+                <a href="javascript:void(0);" class="add-me" (click)="googleWebProperty(web.id, web.name, web.refresh_token)"><i class="fa fa-plus"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--//////////////////////////////////////-->
+<!--////////Websites Connected Modal//////-->
+<!--//////////////////////////////////////-->

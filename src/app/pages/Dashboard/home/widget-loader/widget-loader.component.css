@@ -1,0 +1,19 @@
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 385px;
+  width: 100%;
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: opacity 0.3s linear;
+  overflow: hidden;
+}
+@media screen and (max-width:768px){
+  .preloader {
+    height: 378px;
+  }
+}

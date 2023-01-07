@@ -1,0 +1,71 @@
+<div class="limiter">
+
+  <div class="container">
+    <div class="row" style="min-height: 100vh; align-items: center;">
+      <div class="col-lg-5 col-md-8 col-sm-12 mx-auto py-5">
+        <form class="bg-white px-4 pb-5 form-signin validate-me" [formGroup]="loginForm" autocomplete="off">
+          <div class="login-img">
+            <div class="login-img-center">
+              <img src="./assets/media/logos/my-logo.png">
+            </div>
+          </div>
+          <app-auth-notice></app-auth-notice>
+          <h2 class="login-heading my-4">Log in to Heros of Digital</h2>
+
+          <div class="response-message" style="display: none;"></div>
+
+          <div class=" mb-3">
+            <h6 class="dark-color m-0 font-14"><label for="email">Email *</label></h6>
+            <input class="input" type="email" id="email" data-required="true" formControlName="email"/>
+            <mat-error *ngIf="isControlHasError('email','required')">
+              <strong>Required* </strong>
+            </mat-error>
+            <mat-error *ngIf="isControlHasError('email','email')">
+              <strong>invalid field</strong>
+            </mat-error>
+            <mat-error *ngIf="isControlHasError('email','minlength')">
+              <strong>minimum field length is 3</strong>
+            </mat-error>
+            <mat-error *ngIf="isControlHasError('email','maxlength')">
+              <strong>{{ 'AUTH.VALIDATION.MAX_LENGTH_FIELD' }} 320</strong>
+            </mat-error>
+            <span class="help-block hide-me"><small></small></span>
+          </div>
+
+          <div class="">
+            <h6 class="dark-color m-0 font-14"><label for="pass">Password *</label></h6>
+            <input class="input" type="password" id="password" data-required="true" formControlName="password" autocomplete="off"/>
+            <mat-error *ngIf="isControlHasError('password','required')">
+              <strong>Required* </strong>
+            </mat-error>
+            <mat-error *ngIf="isControlHasError('password','minlength')">
+              <strong>minimum field length is 3</strong>
+            </mat-error>
+            <mat-error *ngIf="isControlHasError('password','maxlength')">
+              <strong>maximum field length is 100</strong>
+            </mat-error>
+            <span class="help-block hide-me"><small></small></span>
+          </div>
+          <div class="mt-3">
+            <button class="form-submit-btn btn submit full-btn" (click)="submit()" id="kt_login_signin_submit">
+              <span *ngIf="btnText">Login</span>
+              <div class="spinner-border text-warning" role="status" *ngIf="loading">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </button>
+          </div>
+
+          <div class="text-center pt-2">
+							<span class="txt1">
+								Forgot your password?
+							</span>
+            <a class="txt2 default-color text-underline"  href="javascript:;" routerLink="/auth/forgot-password">
+              Reset your password
+            </a>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

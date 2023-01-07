@@ -1,0 +1,122 @@
+<div class="row" style="padding: 30px 30px 0 30px;">
+  <div class="col-md-12" style="background: white">
+    <div class="row">
+      <div class="col-6 col-md-6">
+        <div class="d-flex align-items-center mb-4 mt-4">
+          <h3 class="m-0 heading-style">Latest Review Requests</h3> <span class="text-muted text-nowrap">&nbsp;</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-6" align="right">
+        <a routerLink="/online_reviews" class="btn btn-review-site mb-4 mt-4">View Reviews</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row" style="padding: 0px 30px 0 30px;">
+  <div class="col-md-12" style="background: white">
+    <div class="table-responsive">
+      <table datatable [dtOptions]="dtOptions" class="table  hover" style="width: 100% !important;">
+        <thead>
+        <tr>
+          <th>Invite Sent To</th>
+          <th>Type</th>
+          <th>Sent To</th>
+          <th>Date Sent</th>
+          <th>Smart Routing</th>
+          <th>Status</th>
+          <th>Site Reviewed</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody *ngIf="reviews?.length != 0">
+        <tr *ngFor="let review of reviews">
+          <td class="text-verticle-align">
+            {{ review.first_name }} {{ review.last_name }}
+          </td>
+          <td style="min-width: 60px !important;">
+            <span *ngIf="review.type == 'email'"> Email</span>
+            <span *ngIf="review.type == 'sms'"> SMS</span>
+            <span *ngIf="review.type == ''"> N/A</span>
+          </td>
+
+          <td>
+            <span *ngIf="review.type == 'email'"> {{review.email}}</span>
+            <span *ngIf="review.type == 'sms'"> {{review.phone_number}}</span>
+            <span *ngIf="review.type == ''"> N/A</span>
+          </td>
+
+          <td style="min-width: 100px !important;">
+            {{review.date_sent}}
+          </td>
+
+          <td style="min-width: 115px !important;">
+            <span *ngIf="review.smart_routing == 'enable'">  <span class="label label-success">YES</span></span>
+            <span *ngIf="review.smart_routing != 'enable'">  <span class="label label-default">No</span></span>
+          </td>
+
+          <td>
+            <span *ngIf="review.review_status == 'true'"><span class="label label-success-rev">Reviewed</span></span>
+            <span *ngIf="review.review_status == 'false'"><span class="label label-danger-rev">Not Reviewed</span></span>
+          </td>
+
+          <td>
+            <span *ngIf="review.site == 'GP'">
+              <div class="site-label">
+                <img src="assets/media/icons/google-large.png"/> Google
+              </div>
+            </span>
+            <span *ngIf="review.site != 'GP'">
+              <i class="fas fa-clock"></i>  Awaiting Response
+            </span>
+          </td>
+          <td>
+            <div class="d-flex actions-container">
+              <a *ngIf="review.review_status == 'false'" class="envelope-button" (click)="emailBox(review.recipient_id)" data-toggle="modal" data-target="#email-modal"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+        <tr *ngIf="reviews?.length == 0">
+          <td colspan="7" class="no-data-available">No Requests found.!</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<!--/////////////////////////////////////-->
+<!--////////////Modal 8 /////////////////-->
+<!--/////////////////////////////////////-->
+<div class="modal fade" id="email-modal">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header pb-0">
+        <h3 class="modal-title email-heading">Review Request Options</h3>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-12">
+            <label for="select-fields" class="labels-style">How to Send Review Request:</label>
+            <select class="form-control select-hover" id="select-fields" [(ngModel)]="selectOption">
+              <option value="1" selected>Email</option>
+              <option value="2">SMS</option>
+              <option value="3">Email & SMS</option>
+            </select>
+          </div>
+          <div class="col-12 text-center py-3">
+            <button id="sent-emails" class="btn btn-customer" (click)="sendEmail()">
+              Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--/////////////////////////////////////-->
+<!--////////////Modal 8 End//////////////-->
+<!--/////////////////////////////////////-->

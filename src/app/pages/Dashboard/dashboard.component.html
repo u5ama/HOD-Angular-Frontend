@@ -1,0 +1,123 @@
+ <div class="page">
+    <div class="page-main">
+        <!-- Sidebar menu-->
+        <div class="app-sidebar__overlay" id="app-sidebar__overlay"></div>
+        <aside class="app-sidebar " id="mySidepanel">
+          <div class="sidebar-img">
+            <a class="navbar-brand" href="">
+              <img class="navbar-brand-img main-logo" id="fullLogo" src="assets/media/logos/full-logo.png" />
+              <img class="navbar-brand-img logo" id="halfLogo" src="assets/media/logos/my-logo.png">
+            </a>
+
+            <ul class="side-menu">
+              <li class="slide">
+                <a class="side-menu__item" routerLink="/dashboard">
+                  <i class="side-menu__icon fas fa-home"></i>
+                  <span class="side-menu__label" class="hides">Dashboard</span>
+                </a>
+              </li>
+
+              <li class="slide">
+                <a class="side-menu__item"  routerLink="/online_reviews">
+                  <i class="side-menu__icon fas fa-star"></i>
+                  <span class="side-menu__label" class="hides">Online reviews</span>
+                </a>
+              </li>
+
+              <li class="slide">
+                <a class="side-menu__item"  routerLink="/connections">
+                  <i class="side-menu__icon fas fa-plug"></i>
+                  <span class="side-menu__label" class="hides">Connections</span>
+                </a>
+              </li>
+
+              <li class="slide">
+                <a class="side-menu__item" routerLink="/requests_sent">
+                  <img class="rr-icon-sidebar" src="assets/media/reviewrequests.png" alt="" style="margin-right: 15px;">
+                  <span class="side-menu__label" class="hides">Review requests</span>
+                </a>
+              </li>
+
+              <li class="slide">
+                <a class="side-menu__item" routerLink="/appointments">
+                  <i class="side-menu__icon fas fa-laptop"></i>
+                  <span class="side-menu__label" class="hides">Appointment scheduling</span>
+                </a>
+              </li>
+
+              <li class="slide">
+                <a class="side-menu__item" routerLink="/customers">
+                  <i class="side-menu__icon fas fa-users"></i>
+                  <span class="side-menu__label" class="hides">Customers</span>
+                </a>
+              </li>
+
+              <li class="slide">
+                <a class="side-menu__item" routerLink="/form_builder">
+                  <i class="side-menu__icon fas fa-newspaper" aria-hidden="true"></i>
+                  <span class="side-menu__label" class="hides">Form Builder</span>
+                </a>
+              </li>
+
+              <li class="slide">
+                <a class="side-menu__item" routerLink="/settings">
+                  <i class="side-menu__icon fas fa-cog"></i>
+                  <span class="side-menu__label" class="hides">Settings</span>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </aside>
+        <!-- Sidebar menu-->
+
+      <div class="app-content" id="app-content" style="background: #F4F6FB;">
+        <div class="side-app">
+          <div class="main-content">
+            <!-- Top navbar -->
+            <div class="padding-left-right-top">
+            <nav class="navbar navbar-expand-lg navbar-light py-3 sticky-top nav-style" id="navbarSide">
+<!--              navbar-main-->
+              <button type="button" class="navbar-toggler navbar-toggler-right" onclick="openNav()" id="openButton"><i class="fa fa-align-right" aria-hidden="true"></i></button>
+              <button type="button" class="navbar-toggler navbar-toggler-right" onclick="closeNav()" id="closeButton"><i class="fa fa-align-right" aria-hidden="true"></i></button>
+              <div class="container-fluid container-flex-opt">
+
+                <div class="icon ml-auto d-md-flex">
+                  <div class="img-hide d-xs-none d-md-flex">
+                  <p class="text-capitalize my-auto px-2 user-name"><b>{{userName}}</b></p>
+                  </div>
+                <div class="d-flex my-auto">
+                  <a href="" class="dropdown-toggle" id="dropdownMenuIcon" data-toggle="dropdown" aria-haspopup="true"
+                     aria-expanded="false"><img src="assets/media/avatardp.png" alt="" style="height: 36px;width: 36px"></a>
+                  <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right" aria-labelledby="dropdownMenuIcon">
+                    <a class="dropdown-item text-muted dropdown-header" disabled>Welcome!</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item logoutTab" (click)="logout()"><!--                  <i class="ni ni-user-run mr-2"></i>-->Logout</a>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </nav>
+            </div>
+            <!-- Top navbar -->
+            <div class="container-fluid pt-8">
+              <app-home *ngIf="currentRoute == '/dashboard' && currentRoute == ''"></app-home>
+              <router-outlet></router-outlet>
+            </div>
+            <!-- Footer -->
+            <footer class="footer">
+              <div class="row align-items-center justify-content-xl-between">
+                <div class="col-12">
+                  <div class="copyright text-center text-muted">
+                    <p class="text-sm font-weight-500">Copyright 2020 © All Rights Reserved</p>
+                  </div>
+                </div>
+              </div>
+            </footer>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Sidebar menu-->

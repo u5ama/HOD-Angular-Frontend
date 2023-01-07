@@ -1,0 +1,145 @@
+<div class="container-fluid pt-4">
+  <div class="row">
+    <div class="col-12" style="padding: 0 0;">
+      <nav style="padding: 0 15px">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link" id="nav-location-tab" routerLink="/appointment_settings/locations">Location</a>
+          <a class="nav-item nav-link" id="nav-category-tab"  routerLink="/appointment_settings/categories" >Category</a>
+          <a class="nav-item nav-link active" id="nav-service-tab" routerLink="/appointment_settings/services" >Service</a>
+          <a class="nav-item nav-link" id="nav-appointment-tab" routerLink="/appointment_settings/appointment-date" >Appointment Date</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+<div class="container-fluid py-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="card  shadow overflow-hidden card-height">
+        <div class="card-header bg-transparent ">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class=" m-0">Add Service</h3>
+            </div>
+          </div>
+        </div>
+        <form class="validate-business-profile" [formGroup]="serviceForm" autocomplete="off">
+          <div class="card-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="row">
+                    <div class="col-6 mb-4 mt-2">
+                      <label for="cat">Category</label>
+                      <select class="form-control input-form-fields" id="cat" name="cat_list" formControlName="category_id">
+                        <option value="" disabled selected>Select Service</option>
+                        <option *ngFor="let category of categories" [value]="category.id">{{category.category_name}}</option>
+                      </select>
+                      <mat-error *ngIf="isServiceControlHasError('category_id','required')">
+                        <strong>Required* </strong>
+                      </mat-error>
+                      <span class="help-block hide-me"><small></small></span>
+                    </div>
+                    <div class="col-6 mb-4 mt-2">
+                      <label for="service">Service Name</label>
+                      <input type="text" class="settings-input form-control w-100 input-form-fields" id="service" placeholder="Enter Service" name="service" formControlName="service_name"/>
+                      <mat-error *ngIf="isServiceControlHasError('service_name','required')">
+                        <strong>Required* </strong>
+                      </mat-error>
+                      <mat-error *ngIf="isServiceControlHasError('service_name','minlength')">
+                        <strong>minimum field length is 3</strong>
+                      </mat-error>
+                      <mat-error *ngIf="isServiceControlHasError('service_name','maxlength')">
+                        <strong>maximum field length is 100</strong>
+                      </mat-error>
+                      <span class="help-block hide-me"><small></small></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 col-lg-12 position-relative">
+                  <label for="script">Payment Script</label>
+                  <textarea name="" id="script" cols="30" rows="10" placeholder="Add your script here" class="form-control" formControlName="paymentScript"></textarea>
+                  <mat-error *ngIf="isServiceControlHasError('paymentScript','required')">
+                    <strong>Required* </strong>
+                  </mat-error>
+                  <span class="help-block hide-me"><small></small></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-header bg-transparent ">
+            <div class="row align-items-center">
+              <div class="col-12 mb-4 mt-2 " style="display: flex; justify-content: center;">
+                <th class="text-center"><button type="button" (click)="addQuantity()" class="btn btn-primary">Add Service Provider</button></th>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  <table class="table table-borderless" formArrayName="quantities">
+                    <tr *ngFor="let quantity of quantities().controls; let i=index" [formGroupName]="i">
+                      <td>
+                        <label for="ser_name">Name</label>
+                        <input type="text" formControlName="prov_name" id="ser_name" class="settings-input form-control w-100 input-form-fields" placeholder="Enter Name">
+                      </td>
+                      <td>
+                        <label for="ser_email">Email</label>
+                        <input type="email" formControlName="prov_email" id="ser_email" class="settings-input form-control w-100 input-form-fields" placeholder="Enter Email">
+                      </td>
+                      <td>
+                        <label for="ser_contact">Contact</label>
+                        <input type="number" formControlName="prov_phone" id="ser_contact" class="settings-input form-control w-100 input-form-fields" placeholder="Enter Contact">
+                      </td>
+                      <td class="text-center align-middle remove-btn-padding-top">
+                        <button (click)="removeQuantity(i)" class="btn btn-danger"><i class="fas fa-times"></i></button>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mt-3">
+              <button type="button" class="btn mb-2 btn-save" (click)="addService()">Save</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid pb-2">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-hover bg-white shadow">
+        <thead class="border-bottom border-light">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Category</th>
+          <th scope="col">Service Name</th>
+          <th scope="col"></th>
+        </tr>
+        </thead>
+        <span class="border-bottom border-light"></span>
+        <tbody *ngIf="services?.length != 0">
+        <tr *ngFor="let service of services">
+          <th scope="row">{{service.id}}</th>
+          <td *ngFor="let category of service.category">{{category.category_name}}</td>
+          <td>{{service.service_name}}</td>
+          <td>
+            <div class="d-flex actions-container">
+              <a class="delete-button" (click)="deleteService(service.id)"><i class="fas fa-trash-alt icon"></i></a>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+        <tr *ngIf="services?.length == 0" style="text-align: center">
+          <td colspan="4" class="no-data-available">No Services Found!</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

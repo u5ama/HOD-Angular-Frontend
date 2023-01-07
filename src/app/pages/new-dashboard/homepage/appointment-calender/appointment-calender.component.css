@@ -1,0 +1,158 @@
+.cal-month-view .cal-cell-row {
+  background-color: #fafafa;
+}
+h3 {
+  margin: 0 0 10px;
+}
+
+pre {
+  background-color: #f5f5f5;
+  padding: 15px;
+}
+
+
+.btn-outline-primary{
+  color: #7764E4;
+  border-color: #8898AA;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(55,130,146,.11), 0 1px 3px rgba(0,0,0,.08);
+  padding: 7px 15px;
+}
+.btn-outline-secondary {
+  color: #4D4F5C;
+  background: #fff;
+  border-color: #8898AA;
+  box-shadow: 0 4px 6px rgba(55,130,146,.11), 0 1px 3px rgba(0,0,0,.08);
+}
+.btn-outline-primary:hover{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.4);
+}
+
+.btn-outline-secondary:hover {
+  color: #fff;
+  background-color: #e76461;
+  border-color: #e76461;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.4);
+}
+.btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle {
+  color: black;
+  background-color: white;
+  border-color: #ccc;
+}
+
+.btn-iframe{
+  background-color: #e7e7e7;
+  border-color: #e7e7e7;
+  color: black;
+  box-shadow: 0 4px 6px rgba(55, 130, 146, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 7px 15px;
+}
+.btn-iframe:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+@media screen and (max-width: 2560px) {
+  .h3-font-size {
+    font-weight: 700;
+  }
+  .btn-outline-primary{
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+  .btn-outline-secondary{
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .h3-font-size {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .btn-outline-primary{
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+  .btn-outline-secondary{
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .btn-outline-primary{
+    padding: 7px 18px;
+    font-size: 12px;
+  }
+  .btn-outline-secondary{
+    padding: 7px 18px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .h3-font-size {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px){
+  .mar-btm{
+    margin-bottom: 15px;
+  }
+  .btn-alignment{
+    text-align: center!important;
+  }
+  .h3-font-size{
+    font-size: 1.5rem;
+  }
+  .btn-outline-primary{
+    padding: 2px 7px;
+    font-size: 12px;
+  }
+  .btn-outline-secondary{
+    padding: 2px 7px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 576px){
+  .mar-btm{
+    margin-bottom: 15px;
+  }
+  .h3-font-size{
+    font-size: 1.25rem;
+  }
+}
+/*.cal-month-view .cal-open-day-events{*/
+/*  background-color: #ccc !important;*/
+
+/*}*/
+
+/*/////////////////////////////////////*/
+/*/////////////////////////////////////*/
+/*/////////////////////////////////////*/
+.close{
+  border: none;
+  outline: none;
+}
+.bg-color{
+  border-bottom: none;
+  background-color: #F1605B;
+  color: #ffffff;
+}
+.site-label {
+  background-color: #e76461bf;
+  border-radius: 100px;
+  padding: 8px 0 4px;
+  color: white;
+}
+.head-font-size{
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212529;
+}
+.style-appt-head{
+  font-size:0.9rem;
+}
+.style-appt{
+  font-weight: bold;
+}
+/*/////////////////////////////////////*/
+/*/////////////////////////////////////*/
+/*/////////////////////////////////////*/

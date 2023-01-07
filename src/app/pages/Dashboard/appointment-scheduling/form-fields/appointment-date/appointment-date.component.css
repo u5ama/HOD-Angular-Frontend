@@ -1,0 +1,103 @@
+.m-0 {
+  margin: 0px !important;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: .5rem;
+}
+h3, .h3 {
+  font-size: 1.0625rem;
+}
+h4, .h4 {
+  font-size: 1rem;
+}
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+/*//////////////////////////////*/
+/*/////Form Styling/////////////*/
+/*//////////////////////////////*/
+
+.input-form-fields{
+  height: 45px !important;
+  border-radius: 5px !important;
+  width: 100%;
+  color: #999;
+  border: 1px solid #dae0ef;
+}
+.input-form-fields:focus{
+  background-color: #e4f3ff;
+  color: #000 !important;
+  border-color: rgba(0, 195, 237,0.2);
+}
+.settings-input {
+  background-color: #f5fafd;
+  color: inherit;
+  font-weight: normal;
+}
+.form-control{
+  box-shadow: none;
+  font-size: .875rem;
+}
+.btn-save{
+  background-color: #00cf00;
+  border: 1px solid #00cf00;
+  color: #fff;
+  padding: 7px 30px;
+  box-shadow: 0 4px 6px rgba(55, 130, 146, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.btn-save:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+/*//////////////////////////////*/
+/*/////Form Styling/////////////*/
+/*//////////////////////////////*/
+
+.actions-container
+{
+  display: flex;
+  justify-content: center;
+}
+
+/*#page-wrapper table tbody .actions-container .icon*/
+.actions-container .icon
+{
+  font-size: 17px;
+  position: relative;
+  top: 0;
+}
+.delete-button{
+  color: #D01A1A;
+  cursor: pointer;
+  padding: 8px;
+  background-color: #fbe7e7;
+  border-radius: 5px;
+  margin-right: 4px;
+}
+.delete-button:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  transform: translate3d(0, -1px, 0);
+}
+/*/////////////////////////////////////*/
+/*/////////////////////////////////////*/
+/*/////////////////////////////////////*/
+.close{
+  border: none;
+  outline: none;
+}
+.modal-header{
+  border-bottom: none;
+}
+.site-label {
+  background-color: #EBF2FA;
+  border-radius: 100px;
+  padding: 8px 0 4px;
+
+}
+/*/////////////////////////////////////*/
+/*/////////////////////////////////////*/
+/*/////////////////////////////////////*/

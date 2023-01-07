@@ -1,0 +1,105 @@
+<div class="container-fluid pt-4">
+  <div class="row">
+    <div class="col-12" style="padding: 0 0;">
+      <nav style="padding: 0 15px">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link" id="nav-location-tab" routerLink="/appointment_settings/locations" (click)="callData()">Location</a>
+          <a class="nav-item nav-link active" id="nav-category-tab"  routerLink="/appointment_settings/categories" (click)="callData()">Category</a>
+          <a class="nav-item nav-link" id="nav-service-tab" routerLink="/appointment_settings/services" (click)="callData()">Service</a>
+          <a class="nav-item nav-link" id="nav-appointment-tab" routerLink="/appointment_settings/appointment-date" (click)="callData()">Appointment Date</a>
+        </div>
+      </nav>
+     </div>
+   </div>
+ </div>
+
+
+
+
+<div class="container-fluid py-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="card  shadow overflow-hidden card-height">
+        <div class="card-header bg-transparent ">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class=" m-0">Add Category</h3>
+            </div>
+          </div>
+        </div>
+        <form class="validate-business-profile" [formGroup]="categoryForm" autocomplete="off">
+          <div class="card-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="row">
+                    <div class="col-6 mb-4 mt-2">
+                      <label for="location">Location</label>
+                      <select class="form-control input-form-fields" id="location" formControlName="location_id">
+                        <option value="" disabled selected>Select Location</option>
+                        <option *ngFor="let location of locations" [value]="location.id">{{location.locations_name}}</option>
+                      </select>
+                      <mat-error *ngIf="isCategoryControlHasError('location_id','required')">
+                        <strong>Required* </strong>
+                      </mat-error>
+                      <span class="help-block hide-me"><small></small></span>
+                    </div>
+                    <div class="col-6 mb-4 mt-2">
+                      <label for="category">Category Name</label>
+                      <input type="text" class="settings-input form-control w-100 input-form-fields" id="category" placeholder="Enter category Name" name="category" formControlName="category_name"/>
+                      <mat-error *ngIf="isCategoryControlHasError('category_name','required')">
+                        <strong>Required* </strong>
+                      </mat-error>
+                      <mat-error *ngIf="isCategoryControlHasError('category_name','minlength')">
+                        <strong>minimum field length is 3</strong>
+                      </mat-error>
+                      <mat-error *ngIf="isCategoryControlHasError('category_name','maxlength')">
+                        <strong>maximum field length is 100</strong>
+                      </mat-error>
+                      <span class="help-block hide-me"><small></small></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 mt-3">
+                  <button type="button" class="btn mb-2 btn-save" (click)="addCategory()">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid pb-2">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-hover bg-white shadow">
+        <thead class="border-bottom border-light">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Location</th>
+          <th scope="col">Category Name</th>
+          <th scope="col"></th>
+        </tr>
+        </thead>
+        <span class="border-bottom border-light"></span>
+        <tbody *ngIf="categories?.length != 0">
+        <tr *ngFor="let category of categories">
+          <th scope="row">{{category.id}}</th>
+          <td *ngFor="let location of category.locations">{{location.locations_name}}</td>
+          <td>{{category.category_name}}</td>
+          <td>
+            <div class="d-flex actions-container">
+              <a class="delete-button" (click)="deleteCategory(category.id)"><i class="fas fa-trash-alt icon"></i></a>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+        <tr *ngIf="categories?.length == 0" style="text-align: center">
+          <td colspan="4" class="no-data-available">No Categories Found!</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

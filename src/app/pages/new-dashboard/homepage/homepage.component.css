@@ -1,0 +1,3000 @@
+
+.font-family{
+  font-family: 'Gotham', Montserrat;
+}
+.user-info-padding-frm-top{
+  padding-top: 27px;
+}
+.card{
+  border: none;
+  border-radius: 10px;
+}
+
+/*/////////////////////////////////////////////////////////*/
+/*////////////////////Card Shadows//////////////////////*/
+/*/////////////////////////////////////////////////////////*/
+
+/*//////////////////////////*/
+/*//////Widget 1////////////*/
+/*//////////////////////////*/
+.shadow1{
+  box-shadow: 0 10px 30px rgba(44, 40, 40, 0.37);
+}
+/*//////////////////////////*/
+/*//////Widget 2////////////*/
+/*//////////////////////////*/
+.shadow2{
+  box-shadow: 0 3px 6px rgba(44, 40, 40, 0.23);
+}
+/*//////////////////////////*/
+/*//////Widget 3////////////*/
+/*//////////////////////////*/
+.shadow3{
+  box-shadow: 0 3px 6px rgba(44, 40, 40, 0.23);
+}
+/*//////////////////////////*/
+/*//////Widget 4////////////*/
+/*//////////////////////////*/
+.shadow4{
+  box-shadow: 0 3px 6px rgba(44, 40, 40, 0.23);
+}
+/*//////////////////////////*/
+/*//////Widget 5////////////*/
+/*//////////////////////////*/
+.shadow5{
+  box-shadow: 0 10px 30px rgba(44, 40, 40, 0.37);
+}
+/*//////////////////////////*/
+/*//////Widget 6////////////*/
+/*//////////////////////////*/
+.shadow6{
+  box-shadow: 0 3px 6px rgba(44, 40, 40, 0.23);
+}
+/*//////////////////////////*/
+/*//////Widget 7////////////*/
+/*//////////////////////////*/
+.shadow7 {
+  box-shadow: 0 5px 8px rgba(44, 40, 40, 0.10);
+}
+/*//////////////////////////*/
+/*//////Widget 8////////////*/
+/*//////////////////////////*/
+.shadow8 {
+  box-shadow: 0 6px 10px rgba(44, 40, 40, 0.11);
+}
+/*//////////////////////////*/
+/*//////Widget 9////////////*/
+/*//////////////////////////*/
+.shadow9 {
+  box-shadow: 0 6px 10px rgba(44, 40, 40, 0.11);
+}
+/*//////////////////////////*/
+/*//////Widget 10////////////*/
+/*//////////////////////////*/
+.shadow10 {
+  box-shadow: 0 6px 10px rgba(44, 40, 40, 0.11);
+}
+/*//////////////////////////*/
+/*//////Widget 11////////////*/
+/*//////////////////////////*/
+.shadow11 {
+  box-shadow: 0 6px 10px rgba(44, 40, 40, 0.11);
+}
+/*//////////////////////////*/
+/*//////Widget 12////////////*/
+/*//////////////////////////*/
+.shadow12 {
+  box-shadow: 0 6px 10px rgba(44, 40, 40, 0.11);
+}
+/*//////////////////////////*/
+/*//////Widget 13////////////*/
+/*//////////////////////////*/
+.shadow13 {
+  box-shadow: 0 6px 10px rgba(44, 40, 40, 0.11);
+}
+/*//////////////////////////*/
+/*//////Widget 14////////////*/
+/*//////////////////////////*/
+.shadow14 {
+  box-shadow: 0 6px 10px rgba(44, 40, 40, 0.11);
+}
+/*//////////////////////////*/
+/*//////Widget 15////////////*/
+/*//////////////////////////*/
+.shadow15 {
+  box-shadow: 0 2px 6px rgba(44, 40, 40, 0.11);
+}
+.agenda-style{
+  color: #172B4D;
+}
+
+/*/////////////////////////////////////////////////////////*/
+/*////////////////////User Greetings//////////////////////*/
+/*/////////////////////////////////////////////////////////*/
+.hi-user{
+  height: 60px;
+  width: 65px;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+  content: "-";
+}
+.breadcrumb{
+  background-color: transparent;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+ol.breadcrumb li{
+  font-family: inherit;
+  color: #8190A2;
+  align-items: center;
+}
+.user-name{
+  font-family: inherit;
+  color: #454545;
+}
+.congrats-msg{
+  font-family: inherit;
+  color: #454545;
+}
+/*/////////////////////////////////////////////////////////*/
+/*////////////////////User Greetings//////////////////////*/
+/*/////////////////////////////////////////////////////////*/
+
+/*/////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////*/
+
+/*.card{*/
+/*  height: 350px;*/
+/*  !*width: 560px;*!*/
+/*  border-radius: 10px;*/
+/*}*/
+.card-height{
+  height: 350px;
+  /*width: 560px;*/
+  border-radius: 10px;
+}
+/*////////////////////////////////////////////////////////////*/
+/*//////////////////////////Navbar////////////////////////////*/
+/*////////////////////////////////////////////////////////////*/
+.navbar{
+  padding: 0 50px 0 25px;
+}
+.search-icon{
+  height: 16px;
+  width: 16px;
+  top: 0;
+  left: 0;
+  color: grey;
+  transform: translateY(11px);
+}
+.search-fields{
+  border: none;
+  box-shadow: none;
+  width: 300px;
+}
+.search-fields ::placeholder{
+  color: grey;
+}
+.dropdown-toggle::after{
+  content: "";
+  display: none;
+}
+.icon-font-size{
+  font-size: 18px;
+}
+.div-before:before{
+  content: "";
+  width: 1px;
+  height: 48px;
+  background-color: #dee2e6;
+  margin-right: 15px;
+}
+/*////////////////////////////////////////////////////////////*/
+/*//////////////////////////Navbar////////////////////////////*/
+/*////////////////////////////////////////////////////////////*/
+
+/*////////////////////////////////////////////////////////////*/
+/*//////////////////////////card 1////////////////////////////*/
+/*////////////////////////////////////////////////////////////*/
+
+.bg-color{
+  background-color: #6D8CE6;
+  border: 5px solid #668AEF;
+}
+.img-align-left{
+  width: 180px;
+  top: -5px;
+  left: -5px;
+}
+.img-align-right{
+  height: 94px;
+  width: 113px;
+  top: -5px;
+  right: -7px;
+}
+.leads-padding-bottom{
+  padding-bottom: 5px;
+}
+.img-arrow-padding-right{
+  padding-right: 15px;
+}
+.h3-font-size{
+  font-size: 61px;
+}
+.p-percent-value-green{
+  background-color: #51C7A1;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 8px;
+}
+.arrow-dimensions{
+  width: 57px;
+  height: 24px;
+}
+.graph-bar-height{
+  height: 72px;
+}
+/*////////////////////////////////////////////////////////////*/
+/*//////////////////////////card 1////////////////////////////*/
+/*////////////////////////////////////////////////////////////*/
+
+/*////////////////////////////////////////////////////////////*/
+/*//////////////////////////card 2////////////////////////////*/
+/*////////////////////////////////////////////////////////////*/
+
+.bg-color1{
+  background-color: #FFFFFF;
+  border: 5px solid #ffffff;
+}
+.seo-padding{
+  padding-top: 32px;
+  padding-left: 32px;
+}
+.h3-color-green{
+  color: #51C7A1;
+}
+
+/*////////////////////////////////////////////////////////////*/
+/*//////////////////////////card 2////////////////////////////*/
+/*////////////////////////////////////////////////////////////*/
+
+/*////////////////////////////////////////////////////////////*/
+/*//////////////////////////card 3////////////////////////////*/
+/*////////////////////////////////////////////////////////////*/
+.p-percent-value-red{
+  background-color: #F1605B;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 8px;
+}
+.h3-color-red{
+  color: #F1605B;
+}
+.padding-bottom{
+  padding-bottom: 8px;
+}
+.background-style{
+  background-color: #F5F5F5;
+  padding:3px 16px 0;
+  border-radius: 10px;
+  width: 58%;
+}
+.img-position{
+  top: 27px;
+}
+.heading-padding-right{
+  padding-right: 16px;
+}
+.small-scrn-size{
+  font-size: 13px;
+}
+.rating{
+  background-color: transparent;
+  background-image: url("../../../../assets/media/rating-dashboard-img.png");
+  background-position: 80px top;
+  display: inline-block;
+  height: 15px;
+  line-height: 15px;
+  margin-top: 3px;
+  overflow: hidden;
+  width: 80px;
+  text-align: left;
+}
+
+.text-muted {
+  color: #8898aa !important;
+}
+.rating .rating-value {
+  background-color: transparent;
+  background-image: url("../../../../assets/media/rating/rating.png");
+  background-position: 0 top;
+  display: inline-block;
+  height: 15px;
+  line-height: 15px;
+  overflow: hidden;
+  width: 80px;
+}
+.p-dimensions{
+  margin-bottom: 0;
+  padding-top: 5px;
+}
+.p-color{
+  color: #2D3853;
+}
+
+/*////////////////////////////////////////////////////////////*/
+/*//////////////////////////card 3////////////////////////////*/
+/*////////////////////////////////////////////////////////////*/
+
+/*////////////////////////////////////////////////////////////*/
+/*//////////////////////////card 4////////////////////////////*/
+/*////////////////////////////////////////////////////////////*/
+.padding-bottom-spend{
+  padding-bottom: 10px;
+}
+/*////////////////////////////////////////////////////////////*/
+/*//////////////////////////card 4////////////////////////////*/
+/*////////////////////////////////////////////////////////////*/
+
+/*////////////////////////////////////////////////////////////*/
+/*//////////////////////////card 5////////////////////////////*/
+/*////////////////////////////////////////////////////////////*/
+.bg-color2{
+  background-color: #FDD565;
+  border: 5px solid #FFE7A5;
+}
+.h3-color-blue{
+  color: #003B83;
+}
+.revenue-month-date-color{
+  color: #426895;
+}
+.p-percent-value-blue{
+  background-color: #426895;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 8px;
+}
+.reward-img-align-right{
+  top: 0;
+  right: 0;
+  width: 116px;
+  height: 116px;
+}
+.revenue-chart-height{
+  height: 165px;
+}
+/*////////////////////////////////////////////////////////////*/
+/*//////////////////////////card 5////////////////////////////*/
+/*////////////////////////////////////////////////////////////*/
+/*#FFE7A5*/
+/*#FDD565*/
+/*#426895*/
+.card .card-heading {
+  padding: 0 20px;
+  margin: 0;
+}
+
+.card .card-heading.simple {
+  font-size: 20px;
+  font-weight: 300;
+  color: #777;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.card .card-heading.image img {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  margin-right: 15px;
+  vertical-align: top;
+  border: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.card .card-heading.image .card-heading-header {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.card .card-heading.image .card-heading-header h3 {
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: #262626;
+}
+
+.card .card-heading.image .card-heading-header span {
+  font-size: 12px;
+  color: #999999;
+}
+
+/*.card .card-body {*/
+/*  padding: 0 20px;*/
+/*  margin-top: 20px;*/
+/*}*/
+
+.card .card-media {
+  padding: 0 20px;
+  margin: 0 -14px;
+}
+
+.card .card-media img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card .card-actions {
+  min-height: 30px;
+  padding: 0 20px 20px 20px;
+  margin: 20px 0 0 0;
+}
+
+.card .card-comments {
+  padding: 20px;
+  margin: 0;
+  background-color: #f8f8f8;
+}
+
+.card .card-comments .comments-collapse-toggle {
+  padding: 0;
+  margin: 0 20px 12px 20px;
+}
+
+.card .card-comments .comments-collapse-toggle a,
+.card .card-comments .comments-collapse-toggle span {
+  padding-right: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  color: #999;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-comments .media-heading {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.card.people {
+  position: relative;
+  display: inline-block;
+  width: 170px;
+  height: 300px;
+  padding-top: 0;
+  margin-left: 20px;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.card.people:first-child {
+  margin-left: 0;
+}
+
+.card.people .card-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 170px;
+  height: 150px;
+  background-color: #ffffff;
+}
+
+.card.people .card-top.green {
+  background-color: #53a93f;
+}
+
+.card.people .card-top.blue {
+  background-color: #427fed;
+}
+
+.card.people .card-info {
+  position: absolute;
+  top: 150px;
+  display: inline-block;
+  width: 100%;
+  height: 101px;
+  overflow: hidden;
+  background: #ffffff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.card.people .card-info .title {
+  display: block;
+  margin: 8px 14px 0 14px;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 18px;
+  color: #404040;
+}
+
+.card.people .card-info .desc {
+  display: block;
+  margin: 8px 14px 0 14px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 16px;
+  color: #737373;
+  text-overflow: ellipsis;
+}
+
+.card.people .card-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  line-height: 29px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.card.hovercard {
+  position: relative;
+  padding-top: 0;
+  overflow: hidden;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.card.hovercard .cardheader {
+  background: #EE807D;
+  background-size: cover;
+  height: 220px;
+  padding-top: 40px;
+}
+
+.card.hovercard .avatar {
+  position: relative;
+  top: -50px;
+  margin-bottom: -50px;
+}
+
+.card.hovercard .avatar img {
+  width: 100px;
+  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
+
+.card.hovercard .info {
+  padding: 4px 8px 10px;
+}
+
+.card.hovercard .info .title {
+  margin-bottom: 4px;
+  font-size: 24px;
+  line-height: 1;
+  color: #262626;
+  vertical-align: middle;
+  padding-bottom: 50px;
+}
+
+.logo-dimensions{
+  width: 67px;
+  height: 67px;
+}
+.logo-padding-bottom{
+  padding-bottom: 20px;
+}
+.client-name{
+  color: #484848;
+  font-size: 26px;
+}
+.padding-bottom-question{
+  padding-bottom: 35px;
+}
+.btn-contact-green{
+  background-color: #1BD741;
+  color: #ffffff;
+  padding: 7px 20px;
+  border-radius: 100px;
+  box-shadow: 0 10px 6px rgba(44, 40, 40, 0.11);
+}
+.btn-email-white{
+  background-color: #ffffff;
+  color: #F09C99;
+  border: 1px solid #F09C99;
+  padding: 7px 42px;
+  border-radius: 100px;
+}
+.bottom{
+  padding-bottom: 20px;
+}
+
+/*///////////////////////////////////////////////////*/
+/*//////////////Client Manager Card//////////////////*/
+/*///////////////////////////////////////////////////*/
+.padding-top-client-manager{
+  padding-top: 3rem;
+}
+/*///////////////////////////////////////////////////*/
+/*/////////////Client Manager Card///////////////////*/
+/*///////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////*/
+/*///////////////////Eight CARD//////////////////////*/
+/*///////////////////////////////////////////////////*/
+
+.app-leads-graph{
+  height: 260px;
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+  /*///////////////////////////////////////////////////*/
+  /*///////////////////Eight CARD//////////////////////*/
+  /*///////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////*/
+/*///////////////////Nine CARD//////////////////////*/
+/*///////////////////////////////////////////////////*/
+.funnel-graph-body {
+  height: 450px;
+}
+/*///////////////////////////////////////////////////*/
+/*///////////////////Nine CARD//////////////////////*/
+/*///////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////*/
+/*///////////////////Ten CARD//////////////////////*/
+/*///////////////////////////////////////////////////*/
+.table-header{
+  background-color: #F1F3F9;
+}
+.table-body tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+.table-body tr:nth-child(even) {
+  background-color: #F7FAFC;
+}
+.table > thead > tr > th{
+    color: #8898AA;
+}
+.table-shadow {
+box-shadow: 0 3px 6px rgba(44, 40, 40, 0.11);
+}
+.sorting{
+  background-image: url(../../../../assets/media/table-arrows.png);
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: 90%;
+}
+/*///////////////////////////////////////////////////*/
+/*///////////////////Ten CARD//////////////////////*/
+/*///////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////*/
+/*///////////////////Ten CARD//////////////////////*/
+/*///////////////////////////////////////////////////*/
+
+.social-media-follower-number-color{
+  color: #172B4D;
+}
+
+/*///////////////////////////////////////////////////*/
+/*///////////////////Ten CARD//////////////////////*/
+/*///////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////*/
+/*///////////////////Google Rank//////////////////////*/
+/*///////////////////////////////////////////////////*/
+.google-img-right-space{
+  padding-right: 110px;
+}
+/*///////////////////////////////////////////////////*/
+/*///////////////////Google Rank//////////////////////*/
+/*///////////////////////////////////////////////////*/
+
+  /*///////////////////////////////////////////////////*/
+/*///////////////////SEO CARD////////////////////////*/
+/*///////////////////////////////////////////////////*/
+.card-header-setting{
+  border-bottom: none;
+  background-color: #ffffff;
+}
+.table-striped > tr:nth-child(even){
+  background-color:red;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #93A1CC;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #93A1CC;
+}
+.table-responsive {
+  max-height: 460px;
+}
+
+/*////////////////////////////////*/
+
+/*///////////////////////////////////////////////////*/
+/*/////////////////Eight CARD////////////////////////*/
+/*///////////////////////////////////////////////////*/
+.purple-cta-btn{
+  background-color: #6E5DFF;
+  border: 1px solid #6E5DFF;
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(55, 130, 146, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.btn-white{
+  box-shadow: 0 4px 6px rgba(55, 130, 146, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.leads-img{
+  margin-bottom: 15px;
+  width:70%;
+  height: 50%;
+}
+.btn-ctm-clr{
+  color: #ffffff;
+  background-color: #00cf00;
+  box-shadow: 0 4px 6px rgba(55, 130, 146, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.btn-ctm-clr:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+/*///////////////////////////////////////////////////*/
+  /*/////////////////Eight CARD////////////////////////*/
+  /*///////////////////////////////////////////////////*/
+
+  /*///////////////////////////////////////////////////*/
+  /*////////////////////11 CARD////////////////////////*/
+  /*///////////////////////////////////////////////////*/
+.arrow-dimensions-social {
+  width: 30px;
+  height: 19px;
+}
+/*.fb-bg[_ngcontent-lii-c129] {*/
+/*  background-color: #3B5998;*/
+/*  height: 57px;*/
+/*  width: 57px;*/
+/*  border-radius: 100%;*/
+/*  color: #ffffff;*/
+/*  padding-top: 15px;*/
+/*}*/
+/*.fa-facebook-f:before {*/
+/*  content: "\f39e";*/
+/*  font-size: 26px;*/
+/*}*/
+.fb-bg{
+  background-color: #3B5998;
+  height: 57px;
+  width: 57px;
+  border-radius: 100%;
+  color: #ffffff;
+  padding-top: 15px;
+}
+.fa-facebook-f:before{
+  font-size: 26px;
+}
+.insta-bg{
+  background-image: linear-gradient(200deg, #B738AB, #FBCB75);
+  height: 57px;
+  width: 57px;
+  border-radius: 100%;
+  color: #ffffff;
+  padding-top: 15px;
+}
+.fa-instagram:before {
+  font-size: 26px;
+}
+.social{
+  font-size: 12px;
+}
+/*///////////////////////////////////////////////////*/
+/*////////////////////11 CARD////////////////////////*/
+/*///////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////*/
+/*////////////////////12 CARD////////////////////////*/
+/*///////////////////////////////////////////////////*/
+.bg-padd{
+  padding: 4px 10px;
+}
+.box-design{
+  height: 170px;
+  width: 215px;
+  padding-top: 25px;
+  padding-left: 25px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.box-bg-color{
+  background-color: #F7F7F7;
+  border: 1px solid #F7F7F7;
+}
+.box-design1{
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+}
+.box-design2{
+  background-color: #F5807C;
+  border: 1px solid #F5807C;
+}
+.box-design3{
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+}
+.google-img-dimensions{
+  width: 226px;
+  height: 77px;
+}
+.clicks-clr{
+  color: #7B74C9;
+}
+.box-design4{
+  background-color: #FDD565;
+  border: 1px solid #FDD565;
+}
+.blue-color-text{
+  color: #355E90;
+}
+.font_14{
+  font-size: 14px;
+}
+.h3-yellow-clr{
+  color: #FCB554;
+}
+/*///////////////////////////////////////////////////*/
+/*////////////////////12 CARD////////////////////////*/
+/*///////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////*/
+/*////////////////////13 CARD////////////////////////*/
+/*///////////////////////////////////////////////////*/
+.fb-img-dimensions{
+  width: 261px;
+  height: 98px;
+}
+.box-design-fb{
+  height: 170px;
+  width: 215px;
+  padding-top: 25px;
+  padding-left: 25px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+/*///////////////////////////////////////////////////*/
+/*////////////////////13 CARD////////////////////////*/
+/*///////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////*/
+/*///////////////media screen////////////////////////*/
+/*///////////////////////////////////////////////////*/
+@media screen and (max-width: 2560px){
+  /*//////////////////////////*/
+  /*//////USer Greetings////////////*/
+  /*//////////////////////////*/
+  .user-name{
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 56px;
+  }
+  .hi-user{
+    width: 69px;
+    height: 63px
+  }
+  .congrats-msg{
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 56px;
+  }
+  li.breadcrumb-item{
+    font-size: 17px;
+    line-height: 13px
+  }
+  .summary{
+    font-size: 24px;
+  }
+
+  /*//////////////////////////*/
+  /*//////Widget 1////////////*/
+  /*//////////////////////////*/
+  .img-align-left {
+    width: 241px;
+    height: 124px;
+  }
+  .img-align-right {
+    width: 189px;
+    height: 150px;
+    right: -16px;
+  }
+  /*.total-leads-height{*/
+  /*  height: 125px;*/
+  /*}*/
+  .total-leads-top-padding{
+    padding-top: 55px;
+  }
+  .total-leads-padding-btm{
+    padding-bottom: .5rem;
+  }
+  .total-leads-text{
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 15px;
+    padding-bottom: 42px;
+  }
+  .arrow-dimensions{
+    width: 58px;
+    height: 26px;
+  }
+  .h3-font-size{
+    font-size: 65px;
+    font-weight: 500;
+    line-height: 15px;
+    padding-bottom: 24px;
+  }
+  .total-leads-height{
+    height: 80px;
+  }
+
+  .total-leads-this-month{
+    font-size: 17px;
+    line-height: 15px;
+  }
+  /*//////////////////////////*/
+  /*//////Widget 2////////////*/
+  /*//////////////////////////*/
+  .seo-imp-card-padding{
+    padding-top: 40px;
+    padding-left: 30px;
+  }
+  .seo-imp-text{
+    font-size: 21px;
+    font-weight: 500;
+    padding-bottom: 40px;
+    color: #2D3853;
+  }
+  .seo-rank-h3{
+    font-size: 61px;
+    line-height: 25px;
+  }
+  .arrow-num-pad-btm{
+    padding-bottom: 35px;
+  }
+
+  .seo-rank-improvement-arrow{
+    padding-bottom: 35px;
+  }
+  /*.seo-sml-pad{*/
+  /*  padding-bottom: 35px;*/
+  /*}*/
+  .seo-arrow-padding-rite{
+    padding-right: 30px;
+  }
+  .p-percent-value-green{
+    padding: 4px 17px;
+    border-radius: 11px;
+  }
+  /*//////////////////////////*/
+  /*//////Widget 3////////////*/
+  /*//////////////////////////*/
+  .tot-review-pad{
+    padding-top: 0;
+    padding-left: 25px;
+  }
+  .total-review-text{
+    font-size: 21px;
+    font-weight: 500;
+  }
+  .total-review-padding-bottom{
+    padding-bottom: 23px;
+  }
+  .background-style {
+    padding: 10px 16px;
+    width: 39%;
+  }
+  .total-reviews-height{
+    height: 80px;
+  }
+  .total-review-stat-padding-bottom{
+    padding-bottom: 8px;
+  }
+  .total-review-arrow-row-padding{
+    padding-bottom: 35px;
+  }
+  /*//////////////////////////*/
+  /*//////Widget 4////////////*/
+  /*//////////////////////////*/
+  .ad-spend-height{
+    height: 80px;
+  }
+  /*//////////////////////////*/
+  /*//////Widget 5////////////*/
+  /*//////////////////////////*/
+  .revenue-chart-height{
+    height: 80px;
+  }
+  .revenue-arrow-pad-btm{
+    padding-bottom: 20px;
+  }
+  .p-percent-value-blue {
+    padding: 4px 17px;
+    border-radius: 11px;
+  }
+  /*//////////////////////////*/
+  /*//////Widget 6////////////*/
+  /*//////////////////////////*/
+  .cost-per-leads-height{
+    height: 80px;
+  }
+
+  /*//////////////////////////*/
+  /*//////Card 7////////////*/
+  /*//////////////////////////*/
+  .success-manager{
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 16px;
+  }
+  .card.hovercard .avatar img {
+    width: 109px;
+  }
+  .card.hovercard .avatar{
+    margin-bottom: 0;
+  }
+  .padding-bottom-question {
+    font-size: 20px;
+  }
+  .btn-contact-green {
+    padding: 13px 20px;
+  }
+  .btn-email-white {
+    padding: 13px 48px;
+  }
+  /*//////////////////////////*/
+  /*//////Card 11/////////////*/
+  /*//////////////////////////*/
+  .follower-num-1440p-size {
+    font-size: 28px;
+    line-height: 37px;
+  }
+  .media-followers-likes{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 13px;
+  }
+  /*//////////////////////////*/
+  /*//////Card 8////////////*/
+  /*//////////////////////////*/
+  .ctm-btn-btm-pad{
+     padding-bottom:  65px!important;
+  }
+  .app-leads-graph{
+    height: 304px;
+  }
+  .circle-info span {
+    font-size: 18px;
+    font-weight: 700;
+    color: #4D4F5C;
+  }
+  .leads-phone{
+    font-size: 18px!important;
+    color: #4D4F5C;
+    font-weight: 700;
+    line-height: 23px;
+    padding-right: 75px;
+  }
+  .leads-phone-number {
+    font-size: 20px!important;
+    font-weight: 400;
+    line-height: 23px;
+    color: #4D4F5C;
+  }
+  /*//////////////////////////*/
+  /*//////Card 9////////////*/
+  /*//////////////////////////*/
+  .row-2-card-height{
+    height: 770px!important;
+  }
+  .funnel-graph-body {
+    height: 500px;
+    padding: 10px 85px;
+  }
+  .funnel-heading{
+    font-size: 24px;
+    font-weight: 500;
+    color: #172B4D;
+    line-height: 23px;
+  }
+  /*//////////////////////////*/
+  /*//////Card 11////////////*/
+  /*//////////////////////////*/
+  .media-followers-percent-val{
+    font-size: 24px;
+  }
+  .social-media-card-header{
+    padding-left: 43px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  .smf-row1-padding{
+    padding-left: 60px;
+    padding-top: 43px;
+    padding-bottom: 43px;
+  }
+  .smf-row2-padding{
+    padding-left: 60px;
+    padding-top: 45px;
+    padding-bottom: 49px;
+    margin-bottom: 18px;
+  }
+  .fb-icon{
+    width: 57px;
+    height: 57px;
+  }
+  .insta-icon{
+    width: 57px;
+    height: 57px;
+  }
+  .likes-padding{
+    padding-right: 60px;
+  }
+  .followers-padding{
+    padding-right: 30px;
+  }
+  /*////////////////////////////////////*/
+  /*//////Google Ranking Card////////////*/
+  /*////////////////////////////////////*/
+  .google-card{
+    padding-left: 45px;
+    padding-top: 25px;
+    padding-bottom: 60px;
+  }
+  .box-design {
+    height: 230px;
+    width: 284px;
+    margin-right: 35px!important;
+  }
+  .flex-container{
+    margin-bottom: 3rem;
+  }
+
+  .font_14{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 29px;
+  }
+  .font_15 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 29px;
+    margin-bottom: 1rem;
+  }
+  .google-no-size{
+    font-size: 40px;
+    line-height: 31px;
+    font-weight: 500;
+  }
+  .google-img-right-space {
+    padding-right: 140px;
+  }
+  .google-percent-stat{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+  }
+  .google-rank-graph{
+    padding: 0 101px 0 155px;
+  }
+  /*////////////////////////////////////*/
+  /*//////Fb Ranking Card////////////*/
+  /*////////////////////////////////////*/
+  .box-design-fb{
+    height: 230px;
+    width: 284px;
+    margin-right: 35px!important;
+  }
+  .fb-card{
+    padding-left: 45px;
+    padding-top: 25px;
+    padding-bottom: 60px;
+  }
+  .fb-logo-pad-right{
+    padding-right: 75px;
+  }
+  /*////////////////////////////////////*/
+  /*///////Calendar Card////////////////*/
+  /*////////////////////////////////////*/
+  .agenda-style{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 13px;
+  }
+
+}
+@media screen and (max-width: 2420px){
+  .background-style {
+    width: 42%;
+  }
+}
+@media screen and (max-width: 2290px){
+  .background-style {
+    width: 44%;
+  }
+}
+@media screen and (max-width: 2210px){
+  .background-style {
+    width: 46%;
+  }
+  .h3-font-size{
+    font-size: 50px;
+  }
+  .seo-rank-h3{
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 2130px){
+  .background-style {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 2060px){
+  .background-style {
+    width: 50%;
+  }
+  .img-align-left {
+    width: 195px;
+    height: 105px;
+  }
+}
+@media screen and (max-width: 2000px){
+  .background-style {
+    width: 52%;
+  }
+}
+@media screen and (max-width: 1940px){
+  .background-style {
+    width: 54%;
+  }
+}
+@media screen and (max-width: 1920px){
+
+  /*////////////////////////////////*/
+  /*//////User Greetings////////////*/
+  /*////////////////////////////////*/
+
+  li.breadcrumb-item {
+    font-size: 14px;
+  }
+  .user-name {
+    font-size: 24px;
+  }
+
+  .congrats-msg {
+    font-size: 16px;
+  }
+
+  /*////////////////////////////////*/
+  /*//////User Greetings////////////*/
+  /*////////////////////////////////*/
+
+  .p-percent-value-green {
+    padding: 0px 15px;
+    font-size: 14px;
+  }
+  .p-percent-value-blue {
+    padding: 0px 15px;
+    font-size: 14px;
+  }
+  /*.total-leads-height{*/
+  /*  height: 134px;*/
+  /*}*/
+  .h3-font-size{
+     font-size: 34px;
+    padding-bottom: 11px;
+   }
+/*}*/
+/*@media screen and (max-width: 1890px){*/
+  p{
+    margin-bottom: 0;
+  }
+  .seo-imp-card-padding{
+    padding-top: 0px;
+    padding-left: 10px;
+  }
+  /*.card {*/
+  /*  height: 280px;*/
+  /*}*/
+  .card-height{
+    height: 280px;
+  }
+  /*//////////////////////////*/
+  /*//////Widget 1////////////*/
+  /*//////////////////////////*/
+  .img-align-left {
+    width: 145px;
+    height: 80px;
+  }
+  .img-align-right {
+    width: 148px;
+    height: 125px;
+  }
+  .total-leads-top-padding {
+    padding-top: 45px;
+  }
+  /*.total-leads-top-padding {*/
+  /*  padding-top: 13px;*/
+  /*}*/
+  .total-leads-text {
+    padding-bottom: 15px;
+  }
+  .total-leads-this-month {
+    font-size: 15px;
+  }
+  .total-leads-text {
+    font-size: 18px;
+  }
+  .total-leads-padding-btm {
+    padding-bottom: 20px;
+  }
+  /*.total-leads-padding-btm{*/
+  /*  padding-bottom: 8px;*/
+  /*}*/
+  /*.total-leads-sml-height{*/
+  /*  height: 134px;*/
+  /*}*/
+
+  /*//////////////////////////*/
+  /*//////Widget 2////////////*/
+  /*//////////////////////////*/
+  .seo-imp-text {
+    font-size: 20px;
+    padding-bottom: 30px;
+  }
+  .seo-imp-text {
+    font-size: 19px;
+  }
+  /*//////////////////////////*/
+  /*//////Widget 3////////////*/
+  /*//////////////////////////*/
+
+  .total-review-arrow-row-padding{
+    padding-bottom: 25px;
+  }
+  .background-style{
+    width: 50%;
+  }
+  .p-dimensions{
+    padding-top: 0px;
+  }
+  .rating {
+    margin-top: 3px;
+
+  }
+  .arrow-dimensions{
+    width: 50px;
+    height: 24px;
+  }
+  .seo-rank-h3{
+    font-size: 36px;
+  }
+
+  .total-review-padding-bottom{
+    padding-bottom: 0px;
+  }
+  .tot-review-pad {
+    padding-top: 0px;
+    padding-left: 20px;
+  }
+  .heading-padding-right {
+    font-size: 26px;
+  }
+  .total-review-stat-padding-bottom{
+    padding-bottom: 10px;
+  }
+  .card-padding{
+    padding: 1rem;
+  }
+  /*//////////////////////////*/
+  /*//////Widget 4////////////*/
+  /*//////////////////////////*/
+  .arrow-num-pad-btm {
+    padding-bottom: 15px;
+  }
+  .padding-bottom {
+    padding-bottom: 27px;
+  }
+  /*//////////////////////////*/
+  /*//////Widget 4////////////*/
+  /*//////////////////////////*/
+
+  /*//////////////////////////*/
+  /*//////Widget 5////////////*/
+  /*//////////////////////////*/
+  .reward-img-align-right {
+    right: -5px;
+    width: 80px;
+    height: 80px;
+  }
+  .revenue-arrow-pad-btm{
+    align-items: flex-start !important;
+  }
+  .revenue-sml-mar-btm{
+    margin-bottom: 10px;
+  }
+  .revenue-arrow-pad-btm {
+    padding-bottom: 0px;
+  }
+  .dimensions-resp{
+    margin-bottom: 8px;
+  }
+  .chart-padding-top{
+    padding-top: 20px;
+  }
+  .padding-bottom-question {
+    padding-bottom: 15px;
+  }
+  .card.hovercard .info .title {
+    padding-bottom: 10px;
+  }
+  .revenue-chart-height {
+    height: 70px;
+  }
+
+
+/*  /////////////////////////////////////////////////////////*/
+/*  //////////////// Card 7 Success Manager /////////////////*/
+/*  /////////////////////////////////////////////////////////*/
+  .success-manager {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  .btn-email-white {
+    padding: 7px 48px;
+  }
+  .btn-contact-green {
+    padding: 7px 20px;
+  }
+/*  /////////////////////////////////////////////////////////*/
+/*  //////////////// Card 7 Success Manager /////////////////*/
+/*  /////////////////////////////////////////////////////////*/
+
+
+/*  /////////////////////////////////////////////////////////*/
+/*  //////////Row 2 CTA Leads, Funnel and SEO Rank///////////*/
+/*  /////////////////////////////////////////////////////////*/
+
+  .row-2-card-height {
+    height: 600px!important;
+  }
+  .app-leads-graph {
+    height: 240px;
+  }
+  .funnel-graph-body {
+    padding: 10px 40px;
+  }
+
+/*  /////////////////////////////////////////////////////////*/
+/*  //////////Row 2 CTA Leads, Funnel and SEO Rank///////////*/
+/*  /////////////////////////////////////////////////////////*/
+
+/*  /////////////////////////////////////////////////////////*/
+/*  ////////////////Social Media Followers///////////////////*/
+/*  /////////////////////////////////////////////////////////*/
+  .media-followers-percent-val {
+    font-size: 20px;
+  }
+
+  .media-followers-likes {
+    font-size: 16px;
+  }
+  .follower-num-1440p-size {
+    font-size: 18px;
+  }
+/*  /////////////////////////////////////////////////////////*/
+/*  ////////////////Social Media Followers///////////////////*/
+/*  /////////////////////////////////////////////////////////*/
+
+/*  /////////////////////////////////////////////////////////*/
+/*  /////////////////////Google Rank Graph///////////////////*/
+/*  /////////////////////////////////////////////////////////*/
+
+  .google-img-right-space {
+    padding-right: 60px;
+  }
+  .box-design {
+    height: 170px;
+  }
+  .font_14 {
+    font-size: 11px;
+  }
+  .google-no-size {
+    font-size: 28px;
+  }
+  .google-rank-graph {
+    padding: 0 50px 0 155px;
+  }
+
+/*  /////////////////////////////////////////////////////////*/
+/*  /////////////////////Google Rank Graph///////////////////*/
+/*  /////////////////////////////////////////////////////////*/
+
+/*  /////////////////////////////////////////////////////////*/
+/*  /////////////////////Fb Rank Graph///////////////////////*/
+/*  /////////////////////////////////////////////////////////*/
+  .fb-img-dimensions {
+    width: 220px;
+    height: 80px;
+  }
+  .box-design-fb{
+    height: 170px;
+    width: 215px;
+  }
+  .font_15{
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+/*  /////////////////////////////////////////////////////////*/
+/*  /////////////////////Fb Rank Graph///////////////////////*/
+/*  /////////////////////////////////////////////////////////*/
+
+
+}
+@media screen and (max-width: 1700px) {
+
+}
+@media screen and (max-width: 1600px) {
+  .img-align-left {
+    width: 120px;
+  }
+  .img-align-right{
+    width: 90px;
+    height: 70px;
+  }
+}
+@media screen and (max-width: 1440px){
+  /*.card {*/
+  /*  height: 190px;*/
+  /*}*/
+  .card-height{
+    height: 190px;
+  }
+  /*/////////////////////////////////////////////////////////*/
+  /*////////////////////User Greetings//////////////////////*/
+  /*/////////////////////////////////////////////////////////*/
+  ol.breadcrumb li{
+    font-size: 15px;
+    color: #8190A2;
+    line-height: 13px;
+  }
+  .user-name{
+    font-size: 24px;
+    line-height: 56px;
+    font-weight: 600;
+  }
+  .hi-user{
+    height: 48px;
+    width: 52px;
+  }
+  .congrats-msg{
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 53px;
+    margin-top: -13px;
+  }
+
+  /*/////////////////////////////////////////////////////////*/
+  /*////////////////////User Greetings//////////////////////*/
+  /*/////////////////////////////////////////////////////////*/
+
+
+  /*//////////////////////////*/
+  /*//////Widget 1////////////*/
+  /*//////////////////////////*/
+  .img-align-left {
+    width: 130px;
+    height: 67px;
+  }
+  .img-align-right {
+    width: 66px;
+    height: 54px;
+    right: -9px;
+  }
+  .total-leads-top-padding{
+    padding-top: 0px;
+  }
+  .total-leads-text{
+    font-size: 12px;
+    line-height: 6px;
+    font-weight: 500;
+    padding-top: 18px;
+    padding-bottom: 15px;
+  }
+  .h3-font-size{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 13px;
+  }
+  .total-leads-padding-btm {
+    padding-bottom: 8px;
+  }
+  .p-percent-value-green{
+    padding: 5px 8px;
+    font-size: 9px;
+    border-radius: 10px;
+    line-height: 9px;
+    font-weight: 700;
+  }
+  .p-percent-value-blue{
+    padding: 5px 8px;
+    font-size: 9px;
+    border-radius: 10px;
+    line-height: 9px;
+    font-weight: 700;
+  }
+  .p-percent-value-red{
+    padding: 5px 8px;
+    font-size: 9px;
+    border-radius: 10px;
+    line-height: 9px;
+    font-weight: 700;
+  }
+  /*.total-leads-this-month{*/
+  /*  font-size: 12px;*/
+  /*}*/
+  .total-leads-height{
+    height: 55px;
+  }
+  /*.total-leads-height{*/
+  /*  height: 101px;*/
+  /*}*/
+  .img-arrow-padding-right {
+    padding-right: 13px;
+  }
+  /*//////////////////////////*/
+  /*//////Widget 2////////////*/
+  /*//////////////////////////*/
+  .seo-imp-card-padding {
+    padding-top: 0px;
+    padding-left: 0px;
+  }
+  .seo-padding {
+    padding-top: 13px;
+    padding-left: 25px;
+  }
+  .seo-imp-text {
+    font-size: 12px;
+    line-height: 8px;
+    font-weight: 500;
+    padding-top: 18px;
+    padding-bottom: 23px;
+  }
+  .arrow-dimensions {
+    width: 32px;
+    height: 14px;
+  }
+  .seo-rank-h3 {
+    font-size: 25px;
+    line-height: 18px;
+  }
+  /*.seo-sml-pad{*/
+  /*  padding-bottom: 9px!important;*/
+  /*}*/
+  .seo-rank-improvement-arrow{
+    padding-bottom: 9px;
+  }
+  .seo-arrow-padding-rite {
+    padding-right: 12px;
+  }
+  /*//////////////////////////*/
+  /*//////Widget 3////////////*/
+  /*//////////////////////////*/
+  .card-padding {
+    padding: 1.25rem;
+    /*padding-left: 1.25rem;*/
+  }
+  .heading-padding-right {
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  .tot-review-pad {
+    padding-left: 0px;
+  }
+  .total-review-text {
+    font-size: 14px;
+  }
+  .background-style {
+    width: 55%;
+    padding: 2px 13px;
+  }
+  .h5-fonts-size{
+    font-size: 9px;
+    line-height: 10px;
+    font-weight: 700;
+
+  }
+  .total-review-stat-padding-bottom {
+    padding-bottom: 0px;
+  }
+  .arrow-num-pad-btm {
+    padding-bottom: 4px;
+  }
+  .small-scrn-size {
+    font-size: 9px;
+  }
+  /*.total-leads-p1440-height{*/
+  /*  height: 50px;*/
+  /*}*/
+  .total-reviews-height{
+    height: 50px;
+  }
+  .total-review-arrow-row-padding {
+    padding-bottom: 4px;
+  }
+  /*//////////////////////////*/
+  /*//////Widget 4////////////*/
+  /*//////////////////////////*/
+  .card-body-padding-sml-scrn{
+    padding: 0.8rem;
+  }
+  /*.dimensions-resp {*/
+  /*  margin-bottom: 10px;*/
+  /*}*/
+  /*.padding-bottom {*/
+  /*  padding-bottom: 7px;*/
+  /*}*/
+
+  .chart-padding-top {
+    padding-top: 0px;
+  }
+  /*.chart-height-at-sml-scrn {*/
+  /*  height:50px*/
+  /*}*/
+  .ad-spend-height{
+    height:50px;
+  }
+  .cost-per-leads-height{
+    height:50px;
+  }
+  .lead-pad-1440-btm{
+    padding-bottom: 25px;
+  }
+  .spend-pad-1440-btm{
+    padding-bottom: 25px;
+  }
+  /*.pad-1440-btm{*/
+  /*  padding-bottom: 15px;*/
+  /*}*/
+  /*//////////////////////////*/
+  /*//////Widget 4////////////*/
+  /*//////////////////////////*/
+  .reward-img-align-right {
+    width: 63px;
+    height: 62px;
+  }
+
+  .revenue-sml-mar-btm {
+    margin-bottom: 2px;
+  }
+  .revenue-chart-height {
+    height: 50px;
+  }
+
+
+  /*//////////////////////////*/
+  /*//////Card 5////////////*/
+  /*//////////////////////////*/
+  .padding-bottom {
+    padding-bottom: 8px;
+  }
+
+  /*//////////////////////////*/
+  /*////////Card 6////////////*/
+  /*//////////////////////////*/
+  .cost-per-leads-height{
+    height:50px;
+  }
+  /*//////////////////////////*/
+  /*//////Client Manager//////*/
+  /*//////////////////////////*/
+  .padding-top-client-manager{
+    padding-top: 0;
+  }
+  .card.hovercard .cardheader {
+
+    padding-top: 25px;
+    height: 125px;
+  }
+  .logo-padding-bottom {
+    padding-bottom: 5px;
+  }
+  .card.hovercard .avatar img {
+    width: 55px;
+    height: 54px;
+  }
+  .card.hovercard .avatar {
+    top: -30px;
+    margin-bottom: -13px;
+  }
+  .card.hovercard .info {
+    padding: 0px 8px 0px;
+  }
+  .card.hovercard .info .title {
+    padding-bottom: 0px;
+  }
+  .bottom{
+    padding-bottom: 15px;
+  }
+  .btn-contact-green {
+    font-size: 12px;
+  }
+  .btn-email-white {
+    font-size: 12px;
+    padding: 7px 42px;
+  }
+  .logo-dimensions {
+    width: 35px;
+    height: 33px;
+  }
+  .success-manager{
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .client-name {
+    font-size: 14px;
+    padding-bottom: 25px;
+  }
+  .padding-bottom-question{
+    padding-bottom: 35px;
+    font-size: 14px;
+  }
+  /*//////////////////////////*/
+  /*//////Card 7//////*/
+  /*//////////////////////////*/
+  .h5-1440-size{
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .row-2-card-height{
+    height: 405px!important;
+  }
+  .filter-font-size{
+    font-size: 11px;
+  }
+  .app-leads-graph{
+    height: 162px;
+    margin-bottom: 22px;
+  }
+  .lead-graph-stats span{
+    font-size: 9px;
+  }
+  /*//////////////////////////*/
+  /*//////////Card 7//////////*/
+  /*//////////////////////////*/
+
+  /*//////////////////////////*/
+  /*//////////Card 8//////////*/
+  /*//////////////////////////*/
+
+  .ctm-btn-btm-pad {
+    padding-bottom: 1.5rem!important;
+  }
+  .leads-phone{
+    font-size: 9px!important;
+    line-height: 11px;
+    padding-right: 45px;
+  }
+  .leads-phone-number {
+    font-size: 9px!important;
+    font-weight: 400;
+    line-height: 11px;
+  }
+  /*//////////////////////////*/
+  /*//////////Card 8//////////*/
+  /*//////////////////////////*/
+
+  /*//////////////////////////*/
+  /*//////////Card 9//////////*/
+  /*//////////////////////////*/
+
+  .funnel-graph-body {
+    height: 220px;
+    margin-bottom: 20px;
+    padding: 10px 30px;
+  }
+  .funnel-heading{
+    font-size: 12px;
+    line-height: 11px;
+  }
+  /*//////////////////////////*/
+  /*//////////Card 9//////////*/
+  /*//////////////////////////*/
+
+  /*//////////////////////////*/
+  /*//////SEO Rank Table//////*/
+  /*//////////////////////////*/
+  .table > thead > tr > th{
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .table > tbody > tr > td:first-child{
+    font-weight: 700;
+  }
+  .table > tbody > tr > td{
+    font-size: 12px;
+    font-weight: 400;
+  }
+  /*//////////////////////////*/
+  /*//////SEO Rank Table//////*/
+  /*//////////////////////////*/
+  .social-media-fb-padding-1440{
+    padding-top: 0!important;
+    padding-bottom: 15px!important;
+  }
+  .social-media-insta-padding-1440{
+    padding-top: 15px!important;
+    padding-bottom: 15px!important;
+  }
+  .follower-num-1440p-size{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+  }
+  .social{
+    font-size: 8px;
+    line-height: 6px;
+  }
+
+  .p-sml-scrn-size{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px
+  }
+  .arrow-dimensions-social {
+    width: 16px;
+    height: 8px;
+  }
+
+  /*///////////////////////////////////*/
+  /*//////Social Media Followers///////*/
+  /*///////////////////////////////////*/
+  .social-media-card-header{
+    padding-left: 23px;
+    padding-top: 22px;
+    padding-bottom: 23px;
+  }
+  .smf-row1-padding{
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 21px;
+  }
+  .smf-row2-padding{
+    padding-left: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 5px;
+  }
+  .fb-icon{
+    width: 32px;
+    height: 32px;
+  }
+  .insta-icon{
+    width: 30px;
+    height: 30px;
+  }
+  .likes-padding{
+    padding-right: 25px;
+  }
+  .followers-padding{
+    padding-right: 5px;
+  }
+  /*///////////////////////////////////*/
+  /*//////Social Media Followers///////*/
+  /*///////////////////////////////////*/
+
+
+  /*///////////////////////////////*/
+  /*//////Google Rank Connect//////*/
+  /*///////////////////////////////*/
+  .google-img-right-space{
+    padding-right: 60px;
+  }
+  .google-img-dimensions {
+    width: 123px;
+    height: 42px;
+  }
+  .box-design {
+    height: 122px;
+    width: 155px;
+    padding-left: 19px;
+    margin-right: 20px!important;
+  }
+  .font_14 {
+    font-size: 9px;
+    line-height: 13px;
+    padding-bottom: 10px;
+  }
+  .font_15{
+    font-size: 8px;
+    line-height: 13px;
+    padding-bottom: 10px;
+  }
+  .google-no-size{
+    font-size: 29px;
+    line-height: 16px;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+  }
+  .google-percent-stat{
+    font-size: 9px;
+    font-weight: 700;
+  }
+  .google-rank-graph{
+    padding-left: 68px;
+  }
+  /*/////////////////////////////////*/
+  /*//////Facebook Rank Connect//////*/
+  /*/////////////////////////////////*/
+  .box-design-fb {
+    height: 122px;
+    width: 155px;
+    padding-left: 19px;
+    margin-right: 20px!important;
+  }
+  .fb-img-dimensions{
+    width: 141px;
+    height: 53px;
+  }
+  .fb-graph-right-padding{
+    padding-right: 60px;
+  }
+  /*/////////////////////////////////*/
+  /*//////Appointment Calender///////*/
+  /*/////////////////////////////////*/
+  .agenda-style{
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1366px) {
+
+  /*/////////////////////////////////*/
+  /*//////User Greetings/////////////*/
+  /*/////////////////////////////////*/
+  .user-name {
+    font-size: 18px;
+  }
+  .congrats-msg {
+    font-size: 14px;
+  }
+  ol.breadcrumb li {
+    font-size: 12px;
+  }
+  .summary{
+    font-size: 14px;
+  }
+  /*/////////////////////////////////*/
+  /*//////User Greetings/////////////*/
+  /*/////////////////////////////////*/
+
+
+  /*/////////////////////////////////*/
+  /*///////////Card 1////////////////*/
+  /*/////////////////////////////////*/
+  .card1-body-padding{
+    padding: 0.7rem;
+  }
+
+  .img-align-left {
+    width: 115px;
+    height: 55px;
+  }
+  /*/////////////////////////////////*/
+  /*///////////Card 1////////////////*/
+  /*/////////////////////////////////*/
+
+  /*/////////////////////////////////*/
+  /*///////////Card 3////////////////*/
+  /*/////////////////////////////////*/
+  .card-padding {
+    padding: 0.7rem;
+  }
+  .heading-padding-right {
+    font-size: 20px;
+  }
+  /*/////////////////////////////////*/
+  /*///////////Card 3////////////////*/
+  /*/////////////////////////////////*/
+
+  /*/////////////////////////////////*/
+  /*///////////Card 4////////////////*/
+  /*/////////////////////////////////*/
+  .ad-spend-height {
+    height: 60px;
+  }
+  /*/////////////////////////////////*/
+  /*///////////Card 4////////////////*/
+  /*/////////////////////////////////*/
+
+  /*/////////////////////////////////*/
+  /*///////////Card 6////////////////*/
+  /*/////////////////////////////////*/
+  .cost-per-leads-height {
+    height: 60px;
+  }
+  /*/////////////////////////////////*/
+  /*///////////Card 6////////////////*/
+  /*/////////////////////////////////*/
+
+  /*/////////////////////////////////*/
+  /*///////////Card 7////////////////*/
+  /*/////////////////////////////////*/
+  .btn-email-white {
+    padding: 7px 41px;
+  }
+  /*/////////////////////////////////*/
+  /*///////////Card 7////////////////*/
+  /*/////////////////////////////////*/
+
+
+  /*/////////////////////////////////*/
+  /*//////Row 2  Leads Card /////////*/
+  /*/////////////////////////////////*/
+  .filter-font-size {
+    font-size: 9px;
+  }
+  .app-leads-graph {
+    height: 150px;
+    margin-bottom: 15px;
+  }
+  /*/////////////////////////////////*/
+  /*//////Row 2  Leads Card /////////*/
+  /*/////////////////////////////////*/
+
+  /*/////////////////////////////////*/
+  /*//Social Media Followers Card ///*/
+  /*/////////////////////////////////*/
+  .follower-num-1440p-size {
+    font-size: 12px;
+  }
+  .p-sml-scrn-size {
+    font-size: 10px;
+  }
+
+  /*/////////////////////////////////*/
+  /*//Social Media Followers Card ///*/
+  /*/////////////////////////////////*/
+
+  /*/////////////////////////////////*/
+  /*///////Google Rank //////////////*/
+  /*/////////////////////////////////*/
+  .google-img-right-space {
+    padding-right: 40px;
+  }
+  .box-design {
+    margin-right: 15px !important;
+  }
+  .google-rank-graph {
+    padding: 0px 25px 0 70px;
+  }
+  .google-card {
+    padding-bottom: 20px;
+  }
+  /*/////////////////////////////////*/
+  /*///////Google Rank //////////////*/
+  /*/////////////////////////////////*/
+
+  /*/////////////////////////////////*/
+  /*////////// Fb Rank //////////////*/
+  /*/////////////////////////////////*/
+  .fb-logo-pad-right {
+    padding-right: 50px;
+  }
+  .box-design-fb {
+    margin-right: 20px !important;
+  }
+  .fb-card {
+    padding-bottom: 20px;
+  }
+  /*/////////////////////////////////*/
+  /*////////// Fb Rank //////////////*/
+  /*/////////////////////////////////*/
+
+  /*/////////////////////////////////*/
+  /*////Appointment Calender/////////*/
+  /*/////////////////////////////////*/
+  .agenda-style {
+    font-size: 14px;
+  }
+
+}
+@media screen and (max-width: 1280px) {
+
+
+  /*/////////////////////////////////*/
+  /*///////////Card 1////////////////*/
+  /*/////////////////////////////////*/
+
+  .card-height {
+    height: 170px;
+  }
+
+  .img-align-left {
+    width: 90px;
+    height: 50px;
+  }
+  .total-leads-text {
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+  .total-leads-padding-btm {
+    padding-bottom: 5px;
+  }
+  .h3-font-size {
+    font-size: 20px;
+  }
+
+  /*/////////////////////////////////*/
+  /*///////////Card 1////////////////*/
+  /*/////////////////////////////////*/
+
+  /*/////////////////////////////////*/
+  /*///////////Card 3////////////////*/
+  /*/////////////////////////////////*/
+  .total-review-text {
+    font-size: 12px;
+  }
+  .heading-padding-right {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .total-review-stat-padding-bottom {
+    padding-bottom: 7px;
+  }
+  .arrow-dimensions {
+    width: 28px;
+    height: 16px;
+  }
+  .seo-rank-h3 {
+    font-size: 20px;
+  }
+  .total-reviews-height {
+    height: 45px;
+  }
+  .total-review-stat-padding-bottom {
+    padding-bottom: 2px;
+  }
+  /*/////////////////////////////////*/
+  /*///////////Card 3////////////////*/
+  /*/////////////////////////////////*/
+
+  /*/////////////////////////////////*/
+  /*///////////Card 4////////////////*/
+  /*/////////////////////////////////*/
+  .arrow-num-pad-btm {
+    padding-bottom: 0px;
+  }
+  .dimensions-resp {
+    margin-bottom: 4px;
+  }
+  /*/////////////////////////////////*/
+  /*///////////Card 4////////////////*/
+  /*/////////////////////////////////*/
+
+  /*/////////////////////////////////*/
+  /*///////////Card 5////////////////*/
+  /*/////////////////////////////////*/
+  .revenue-chart-height {
+    height: 45px;
+  }
+  /*/////////////////////////////////*/
+  /*///////////Card 5////////////////*/
+  /*/////////////////////////////////*/
+
+  /*/////////////////////////////////*/
+  /*//////////Client Manager/////////*/
+  /*/////////////////////////////////*/
+  .success-manager {
+    font-size: 12px;
+  }
+  .padding-bottom-question {
+    padding-bottom: 20px;
+  }
+  .client-name {
+    font-size: 14px;
+    padding-bottom: 5px;
+  }
+  /*/////////////////////////////////*/
+  /*//////////Client Manager/////////*/
+  /*/////////////////////////////////*/
+
+
+  /*/////////////////////////////////*/
+  /*///////////Row 2 Leads Card//////*/
+  /*/////////////////////////////////*/
+  .filter-font-size {
+    font-size: 8px;
+  }
+  /*/////////////////////////////////*/
+  /*///////////Row 2 Leads Card//////*/
+  /*/////////////////////////////////*/
+
+  /*/////////////////////////////////*/
+  /*///////////Row 2 SEO Table//////*/
+  /*/////////////////////////////////*/
+  .table > tbody > tr > td {
+    font-size: 10px;
+  }
+  /*/////////////////////////////////*/
+  /*///////////Row 2 SEO Table//////*/
+  /*/////////////////////////////////*/
+
+
+  /*/////////////////////////////////*/
+  /*////Social Media Followers///////*/
+  /*/////////////////////////////////*/
+  .follower-num-1440p-size {
+    font-size: 10px;
+  }
+  /*/////////////////////////////////*/
+  /*////Social Media Followers///////*/
+  /*/////////////////////////////////*/
+
+
+  /*/////////////////////////////////*/
+  /*////Appointment Calender/////////*/
+  /*/////////////////////////////////*/
+  .agenda-style {
+    font-size: 12px;
+  }
+  /*/////////////////////////////////*/
+  /*////Appointment Calender/////////*/
+  /*/////////////////////////////////*/
+
+  /*/////////////////////////////////*/
+  /*//////Disconnect Message/////////*/
+  /*/////////////////////////////////*/
+  .ads-disconnect2 {
+    font-size: 16px !important;
+  }
+  .btn-reconnect2 {
+    padding: 5px 15px !important;;
+  }
+  .ads-disconnect3 {
+    font-size: 16px !important;;
+  }
+  .btn-reconnect3 {
+    padding: 5px 15px !important;;
+  }
+  /*/////////////////////////////////*/
+  /*//////Disconnect Message/////////*/
+  /*/////////////////////////////////*/
+
+  /*/////////////////////////////////*/
+  /*///////////Google Rank///////////*/
+  /*/////////////////////////////////*/
+  .google-no-size {
+    font-size: 18px;
+  }
+    /*/////////////////////////////////*/
+    /*///////////Google Rank///////////*/
+    /*/////////////////////////////////*/
+
+}
+@media screen and (max-width: 1199px){
+
+  /*////////////////////////*/
+  /*///////card 7///////////*/
+  /*////////////////////////*/
+
+  .client-success-manager-card{
+    padding-bottom: 30px;
+  }
+
+/*////////////////////////*/
+/*///////card 8///////////*/
+/*////////////////////////*/
+
+  .cta-card{
+      margin-bottom: 20px;
+  }
+  .filter-font-size {
+    font-size: 10px;
+  }
+  .fa-chevron-up:before {
+    font-size: 12px;
+  }
+  .funnel-heading {
+    font-size: 10px;
+  }
+  .overview {
+    font-size: 12px;
+  }
+
+/*////////////////////////*/
+/*///////card 9///////////*/
+/*////////////////////////*/
+
+  .funnel-card{
+    margin-bottom: 20px;
+  }
+
+  .funnel-graph-body {
+    margin-bottom: 0px;
+    padding: 10px 15px;
+  }
+
+/*////////////////////////*/
+/*///////card 10///////////*/
+/*////////////////////////*/
+  .sorting {
+    background-position: 85%;
+  }
+
+/*/////////////////////////*/
+/*///////card 11///////////*/
+/*/////////////////////////*/
+
+  .social-media-fb-padding-1440 {
+    padding-top: 0!important;
+    padding-bottom: 10px!important;
+  }
+  .smf-row1-padding {
+    padding-left: 4px;
+  }
+  .likes-padding {
+    padding-right: 5px;
+  }
+  .smf-row2-padding {
+    padding-left: 4px;
+  }
+  .social-media-insta-padding-1440 {
+    padding-top: 10px!important;
+    padding-bottom: 10px!important;
+  }
+
+  /*/////////////////////////*/
+  /*///////card 13///////////*/
+  /*/////////////////////////*/
+  .flex-container{
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  .flex-container > * {
+    margin: 1em 0;
+  }
+  .google-rank-graph {
+    padding: 0 36px 0 0;
+  }
+}
+@media screen and (max-width: 480px){
+  /*/////////////////////////*/
+  /*///////card 10///////////*/
+  /*/////////////////////////*/
+  .table > thead > tr > th {
+    font-size: 9px;
+  }
+  .sorting {
+    background-position: 98% 11px;
+  }
+  /*/////////////////////////*/
+  /*///////card 13///////////*/
+  /*/////////////////////////*/
+  .google-card {
+    padding-left: 0;
+  }
+  .flex-container{
+    justify-content: center;
+  }
+  .google-rank-graph {
+    padding: 0 13px;
+  }
+  /*/////////////////////////*/
+  /*///////card 14///////////*/
+  /*/////////////////////////*/
+  .fb-card {
+    padding-left: 0;
+  }
+  .fb-graph-right-padding{
+    padding: 0 13px;
+  }
+
+}
+@media screen and (max-width: 360px) {
+  /*/////////////////////////*/
+  /*///////card 10///////////*/
+  /*/////////////////////////*/
+  .table > thead > tr > th {
+    font-size: 10px;
+  }
+
+  .sorting {
+    background-position: 100% 27px;
+  }
+}
+/*@media screen and (max-width: 1400px){*/
+/*  .arrow-dimensions{*/
+/*    width: 40px;*/
+/*  }*/
+/*  .total-review-font-size{*/
+/*    font-size: 13px;*/
+/*  }*/
+/*  .graph-bar-height{*/
+/*    height: 93px;*/
+/*  }*/
+/*  .background-style {*/
+/*    padding: 2px 5px 0;*/
+/*    width: 55%*/
+/*  }*/
+/*  .small-scrn-size{*/
+/*    font-size: 11px;*/
+/*  }*/
+/*  .heading-padding-right{*/
+/*    padding-right: 3px;*/
+/*    font-size: 1.25rem;*/
+/*  }*/
+/*  .reward-img-align-right{*/
+/*    width: 70px;*/
+/*    height: 70px;*/
+/*  }*/
+/*  .h3-font-size{*/
+/*    font-size: 26px;*/
+/*  }*/
+/*  !*.card {*!*/
+/*  !*  height: 310px;*!*/
+/*  !*}*!*/
+/*  .media-screen-padding{*/
+/*    padding: 0;*/
+/*  }*/
+/*  .card.hovercard .info .title{*/
+/*    padding-bottom: 5px;*/
+/*  }*/
+/*  .padding-bottom-question{*/
+/*    padding-bottom: 15px;*/
+/*  }*/
+/*  .leads-img{*/
+/*    height: 40%;*/
+/*    width: 95%;*/
+/*  }*/
+/*  .table-header-font-size tr th{*/
+/*    font-size: 14px;*/
+/*  }*/
+/*  .table-row-font-size tr td{*/
+/*    font-size: 12px;*/
+/*  }*/
+/*  .h5-fonts-size{*/
+/*    font-size: 12px;*/
+/*  }*/
+/*  .fb-bg{*/
+/*    width: 22px;*/
+/*    height: 22px;*/
+/*    font-size: 12px;*/
+/*  }*/
+/*  .insta-bg{*/
+/*    width: 22px;*/
+/*    height: 22px;*/
+/*    font-size: 12px;*/
+/*  }*/
+/*  .p-sml-scrn-size{*/
+/*    font-size: 12px;*/
+/*  }*/
+/*  .arrow-dimensions-social {*/
+/*    width: 20px;*/
+/*    height: 10px;*/
+/*  }*/
+/*  .google-img-dimensions {*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*  }*/
+/*  .box-design {*/
+/*    height: 130px;*/
+/*    width: 140px;*/
+/*    padding-top: 10px;*/
+/*    padding-left: 15px;*/
+/*  }*/
+/*  .font_14 {*/
+/*    font-size: 13px;*/
+/*  }*/
+/*  .google-no-size{*/
+/*    font-size: 1rem;*/
+/*    margin-bottom: 0;*/
+/*  }*/
+/*  .fb-img-dimensions{*/
+/*    width: 180px;*/
+/*    height: 75px;*/
+/*  }*/
+/*  .padding-bottom{*/
+/*    padding-bottom: 0px;*/
+/*  }*/
+/*  .total-review-margin-bottom{*/
+/*    margin-bottom: 3px;*/
+/*  }*/
+/*  .revenue-chart-height{*/
+/*    height: 50px;*/
+/*  }*/
+/*  .padding-bottom-spend{*/
+/*    padding-bottom: 25px;*/
+/*  }*/
+/*!*  SEO Table *!*/
+/*}*/
+/*@media screen and (max-width: 1366px){*/
+/*  .card {*/
+/*    height: 190px;*/
+/*  }*/
+/*  .card-body{*/
+/*    padding: 1rem;*/
+/*  }*/
+  /*//////////////////////////*/
+  /*////////Widget 1//////////*/
+  /*//////////////////////////*/
+/*  .total-leads-padding-btm {*/
+/*    padding-bottom: 5px;*/
+/*  }*/
+/*  .leads-padding-bottom {*/
+/*    padding-bottom: 3px;*/
+/*  }*/
+/*  .revenue-chart-height {*/
+/*    height: 50px;*/
+/*  }*/
+/*}*/
+/*@media screen and (max-width: 1280px){*/
+/*  .filter-font-size{*/
+/*    font-size: 12px;*/
+/*  }*/
+/*  .revenue-chart-height {*/
+/*    height: 50px;*/
+/*  }*/
+/*}*/
+
+/*///////////////////////////////////////////////////*/
+
+
+/*///////////////media screen////////////////////////*/
+/*///////////////////////////////////////////////////*/
+.circle-info {
+  margin: 0 auto;
+}
+.yellow-circle {
+  border-color: #FFD152 !important;
+}
+
+.circle-small {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border: 2px solid #0088e6;
+  border-radius: 50%;
+}
+.circle-info span {
+  font-size: 0.75rem;
+}
+.green-circle {
+  border-color: #00cf00;
+}
+.gray-circle {
+  border-color: #888 !important;
+}
+/*//////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////HighChart CSS////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////*/
+/*.highcharts-figure, .highcharts-data-table table {*/
+/*  min-width: 310px;*/
+/*  max-width: 800px;*/
+/*  margin: 1em auto;*/
+/*}*/
+
+/*#container {*/
+/*  height: 400px;*/
+/*}*/
+
+/*.highcharts-data-table table {*/
+/*  font-family: Verdana, sans-serif;*/
+/*  border-collapse: collapse;*/
+/*  border: 1px solid #EBEBEB;*/
+/*  margin: 10px auto;*/
+/*  text-align: center;*/
+/*  width: 100%;*/
+/*  max-width: 500px;*/
+/*}*/
+/*.highcharts-data-table caption {*/
+/*  padding: 1em 0;*/
+/*  font-size: 1.2em;*/
+/*  color: #555;*/
+/*}*/
+/*.highcharts-data-table th {*/
+/*  font-weight: 600;*/
+/*  padding: 0.5em;*/
+/*}*/
+/*.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {*/
+/*  padding: 0.5em;*/
+/*}*/
+/*.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {*/
+/*  background: #f8f8f8;*/
+/*}*/
+/*.highcharts-data-table tr:hover {*/
+/*  background: #f1f7ff;*/
+/*}*/
+
+/*///////////////////////////////////////////////////////*/
+/*//////////////call tracking metrics/////////////////////*/
+/*///////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////*/
+/*///////////////Modal self created design///////////////*/
+/*///////////////////////////////////////////////////////*/
+.modal-padding{
+  padding: 1.6rem;
+}
+.page-panel {
+  width: 100%;
+}
+.page-panel img {
+  float: left;
+  margin: 10px 0;
+  max-width: 70px;
+}
+
+.page-panel .page-content {
+  display: inline-block;
+  margin-left: 20px;
+}
+.page-panel .page-content h3 {
+  font-size: 16px;
+  color: #010318;
+  font-weight: 600;
+  margin: 0;
+  padding-top: 1.875rem;
+}
+.page-panel .page-content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.3;
+}
+.add-icon {
+  float: right;
+}
+.add-icon i.fa {
+  color: #fff;
+  -webkit-text-stroke: 2px #F1605B;
+  background: #F1605B;
+  padding: 7px 10px;
+  border-radius: 3px;
+  font-size: 20px;
+  margin: 27px 0;
+}
+.modal-footer{
+  border: none;
+}
+.box {
+  display: flex;
+  align-items:center;
+}
+.mar-top{
+  margin-top: -11px;
+}
+.margin-from-top{
+  margin-top: 6rem;
+}
+/*///////////////////////////////////////////////////////*/
+/*///////////////Modal self created design///////////////*/
+/*///////////////////////////////////////////////////////*/
+/*.box-design{*/
+/*  height: 114px;*/
+/*  width: 114px;*/
+/*  background-color: #ebf2fa;*/
+/*  border: 1px solid #ebf2fa;*/
+/*  padding-top: 23px;*/
+/*}*/
+/*/////////////////////////////////////*/
+/*///////////Page Model/////////////////*/
+/*/////////////////////////////////////*/
+.heading-size{
+  font-size: 14px;
+}
+
+.twoColumn1{
+  width: 20%;
+  float:left;
+}
+.twoColumn2{
+  width: 50%;
+  float:left;
+}
+.p-style {
+  margin: 0;
+  padding: 0;
+}
+.img-left{
+  max-width: 100%;
+}
+.font-p{
+  font-size: 12px;
+}
+/*/////////////////////////////////////*/
+/*/////////////////////////////////////*/
+/*/////////////////////////////////////*/
+#overlay {
+  position: absolute; /* Sit on top of the page content */
+
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.75); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+/*.card-alert:hover #overlay{
+  display: block;
+}*/
+#overlay1 {
+  position: absolute; /* Sit on top of the page content */
+
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.75); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+/*.card-alert:hover #overlay1{
+  display: block;
+}*/
+#overlay2 {
+  position: absolute; /* Sit on top of the page content */
+
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.75); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+/*.card-alert:hover #overlay2{
+  display: block;
+}*/
+#overlay3 {
+  position: absolute; /* Sit on top of the page content */
+
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.75); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+/*
+.card-alert:hover #overlay3{
+  display: block;
+}
+*/
+
+.ads-disconnect{
+  color: #F05F5A;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+.btn-reconnect{
+  padding: 5px 15px;
+  background-color: #51C7A1;
+  color: #ffffff;
+  border-radius: 100px;
+  box-shadow: 0px 10px 6px rgba(44, 40, 40, 0.11);
+  font-size: 14px;
+}
+
+.ads-disconnect1{
+  color: #F05F5A;
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+.btn-reconnect1{
+  padding: 7px 15px;
+  background-color: #51C7A1;
+  color: #ffffff;
+  border-radius: 100px;
+  box-shadow: 0px 10px 6px rgba(44, 40, 40, 0.11);
+  font-size: 14px;
+}
+
+.ads-disconnect2{
+  color: #F05F5A;
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+.btn-reconnect2{
+  padding: 10px 25px;
+  background-color: #51C7A1;
+  color: #ffffff;
+  border-radius: 100px;
+  box-shadow: 0px 10px 6px rgba(44, 40, 40, 0.11);
+}
+
+.ads-disconnect3{
+  color: #F05F5A;
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+.btn-reconnect3{
+  padding: 10px 25px;
+  background-color: #51C7A1;
+  color: #ffffff;
+  border-radius: 100px;
+  box-shadow: 0px 10px 6px rgba(44, 40, 40, 0.11);
+}
+
+/*////////////////////////////////////*/
+/*///////////Card four google  adworks////////*/
+/*////////////////////////////////////*/
+.list-group-item{
+  border: none;
+}
+.list-item-styling li{
+  border-bottom: dashed 1px #999999;
+  font-size: 14px;
+  padding: .75rem 0;
+}
+.list-item-styling li:last-child{
+  border-bottom: none;
+}
+.fa-check:before{
+  color: #87C04E;
+}
+.btn-google-ads-green {
+  color: #fff;
+  font-size: 14px;
+  border-color: #3cba54;
+  background-color: #3cba54;
+  box-shadow: 0 4px 6px rgba(55, 130, 146, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 7px 15px;
+}
+
+.btn-google-ads-green:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.btn-google-position{
+  top: 40%;
+}
+/*//////////////////////////////////*/
+/*/////Card four google  adworks/////*/
+/*/////////////////////////////////*/

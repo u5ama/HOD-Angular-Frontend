@@ -1,0 +1,139 @@
+<div class="container-fluid pt-4">
+  <div class="row">
+    <div class="col-12" style="padding: 0 0;">
+      <nav style="padding: 0 15px">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link" id="nav-location-tab" routerLink="/appointment_settings/locations">Location</a>
+          <a class="nav-item nav-link" id="nav-category-tab"  routerLink="/appointment_settings/categories" >Category</a>
+          <a class="nav-item nav-link" id="nav-service-tab" routerLink="/appointment_settings/services" >Service</a>
+          <a class="nav-item nav-link active" id="nav-appointment-tab" routerLink="/appointment_settings/appointment-date" >Appointment Date</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+<div class="container-fluid py-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="card  shadow card-height">
+        <div class="card-header bg-transparent ">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class=" m-0">Select Dates</h3>
+            </div>
+          </div>
+        </div>
+        <form class="validate-business-profile" [formGroup]="DateForm" autocomplete="off">
+          <div class="card-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="row">
+                    <div class="col-6 mb-4 mt-2">
+                      <label for="service_list">Services</label>
+                      <select class="form-control input-form-fields" id="service_list" name="service_list" formControlName="service_id">
+                        <option value="" disabled selected>Select Service</option>
+                        <option *ngFor="let service of services" [value]="service.id">{{service.service_name}}</option>
+
+                      </select>
+                      <mat-error *ngIf="isDateControlHasError('service_id','required')">
+                        <strong>Required* </strong>
+                      </mat-error>
+                      <span class="help-block hide-me"><small></small></span>
+                    </div>
+                    <div class="col-6 mb-4 mt-2">
+                      <label for="date">Date</label>
+                      <input type="date" class="settings-input form-control w-100 input-form-fields" id="date" name="date" formControlName="appointment_date"/>
+                      <mat-error *ngIf="isDateControlHasError('appointment_date','required')">
+                        <strong>Required* </strong>
+                      </mat-error>
+                      <mat-error *ngIf="isDateControlHasError('appointment_date','minlength')">
+                        <strong>minimum field length is 3</strong>
+                      </mat-error>
+                      <mat-error *ngIf="isDateControlHasError('appointment_date','maxlength')">
+                        <strong>maximum field length is 100</strong>
+                      </mat-error>
+                      <span class="help-block hide-me"><small></small></span>
+                    </div>
+                    <div class="col-6 mb-4 mt-2">
+                      <label for="choices-multiple-remove-button">Time</label>
+                      <select class="settings-input form-control w-100 input-form-fields" id="choices-multiple-remove-button" placeholder="Select time Slot" multiple formControlName="appointment_time">
+                        <option value="00:00-01:00">00:00 - 01:00</option>
+                        <option value="01:00-02:00">01:00 - 02:00</option>
+                        <option value="02:00-03:00">02:00 - 03:00</option>
+                        <option value="03:00-04:00">03:00 - 04:00</option>
+                        <option value="04:00-05:00">04:00 - 05:00</option>
+                        <option value="05:00-06:00">05:00 - 06:00</option>
+                        <option value="06:00-07:00">06:00 - 07:00</option>
+                        <option value="07:00-08:00">07:00 - 08:00</option>
+                        <option value="08:00-09:00">08:00 - 09:00</option>
+                        <option value="09:00-10:00">09:00 - 10:00</option>
+                        <option value="10:00-11:00">10:00 - 11:00</option>
+                        <option value="11:00-12:00">11:00 - 12:00</option>
+                        <option value="12:00-13:00">12:00 - 13:00</option>
+                        <option value="13:00-14:00">13:00 - 14:00</option>
+                        <option value="14:00-15:00">14:00 - 15:00</option>
+                        <option value="15:00-16:00">15:00 - 16:00</option>
+                        <option value="16:00-17:00">16:00 - 17:00</option>
+                        <option value="17:00-18:00">17:00 - 18:00</option>
+                        <option value="18:00-19:00">18:00 - 19:00</option>
+                        <option value="19:00-20:00">19:00 - 20:00</option>
+                        <option value="20:00-21:00">20:00 - 21:00</option>
+                        <option value="21:00-22:00">21:00 - 22:00</option>
+                        <option value="22:00-23:00">22:00 - 23:00</option>
+                        <option value="23:00-24:00">23:00 - 24:00</option>
+                      </select>
+                      <mat-error *ngIf="isDateControlHasError('appointment_time','required')">
+                        <strong>Required* </strong>
+                      </mat-error>
+                      <mat-error *ngIf="isDateControlHasError('appointment_time','maxlength')">
+                        <strong>maximum field length is 100</strong>
+                      </mat-error>
+                      <span class="help-block hide-me"><small></small></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 mt-3">
+                  <button type="button" class="btn mb-2 btn-save" (click)="AddDate()">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid pb-2">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-hover bg-white shadow">
+        <thead class="border-bottom border-light">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Services</th>
+          <th scope="col">Date</th>
+          <th scope="col">Time</th>
+        </tr>
+        </thead>
+        <span class="border-bottom border-light"></span>
+        <tbody *ngIf="dates?.length != 0">
+        <tr *ngFor="let date of dates">
+          <th scope="row">{{date.id}}</th>
+          <td *ngFor="let service of date.services">{{service.service_name}}</td>
+          <td>{{date.available_date}}</td>
+          <td>{{date.available_time}}</td>
+          <td>
+            <div class="d-flex actions-container">
+              <a class="delete-button" (click)="deleteDate(date.id)"><i class="fas fa-trash-alt icon"></i></a>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+        <tr *ngIf="dates?.length == 0" style="text-align: center">
+          <td colspan="4" class="no-data-available">No Appointments Found!</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

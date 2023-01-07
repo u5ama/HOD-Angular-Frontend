@@ -1,0 +1,152 @@
+<div class="card hovercard h-100 shadow8 card-alert row-2-card-height">
+  <div id="overlay1" *ngIf="buttonBox">
+    <div class="d-flex align-items-center flex-column h-100 justify-content-center">
+      <div class="pb-3">
+        <img src="assets/media/error.png" alt="">
+      </div>
+      <div>
+        <p class="ads-disconnect1">CTM Disconnected</p>
+      </div>
+      <div>
+        <button class="btn btn-reconnect1" type="button" data-toggle="modal" data-target="#connect-ctm">Click to Connect</button>
+      </div>
+    </div>
+  </div>
+  <div class="card-header bg-white text-left">
+    <div class="d-flex">
+      <div>
+        <p class="text-muted mb-0">Overview</p>
+      </div>
+      <div class="ml-auto">
+        <i class="fas fa-chevron-up"></i>
+      </div>
+    </div>
+    <!--          <h5 class="h5-fonts-size h5-1440-size">Leads</h5>-->
+    <h5 class="funnel-heading">Leads</h5>
+  </div>
+  <!--<div class="card-body justify-content-center align-items-center d-flex" *ngIf="buttonBox">
+    <button type="button" class="btn btn-ctm-clr" data-toggle="modal" data-target="#connect-ctm">Connect CTM</button>
+  </div>-->
+  <div class="card-body text-center" *ngIf="recordBox">
+    <div class="btn-group ctm-btn-btm-pad" role="group" aria-label="Basic example">
+      <button type="button" class="btn purple-cta-btn px-4 filter-font-size">Filter by CTA</button>
+      <button type="button" class="btn btn-white border-0 px-4 filter-font-size">Filter by Channel</button>
+    </div>
+    <div class="app-leads-graph">
+
+
+    <div class="chart-container" style="position: relative; height:100%; width:100%">
+      <canvas baseChart
+              [data]="doughnutChartData"
+              [labels]="doughnutChartLabels"
+              [options]="barChartOptions"
+              [colors]="doughnutChartColors"
+              [chartType]="doughnutChartType">
+      </canvas>
+    </div>
+    </div>
+
+    <!--          <img src="assets/media/Group-circle.png" alt="" style="" class="leads-img">-->
+    <div class="circle-info">
+      <!--<div>
+        <div class="ml-4 circle-small green-circle mr-2"></div>
+        <span class="text-muted mr-4">Whatsapp</span>
+        <span>2.6K</span>
+      </div>
+      <div>
+        <div class="circle-small blue-circle mr-2"></div>
+        <span class="text-muted mr-4">Email</span>
+        <span>671</span>
+      </div>-->
+      <div class="lead-graph-stats">
+        <div class="circle-small yellow-circle mr-2"></div>
+        <span class="leads-phone">Phone</span>
+        <span class="leads-phone-number">{{allCalls}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Connect CTM Modal -->
+<div class="modal fade" id="connect-ctm" role="dialog">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">User Credentials</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form class="bg-white px-4 pb-1 form-signin validate-me" [formGroup]="submitCTMForm" autocomplete="off">
+          <div class="alert alert-danger" role="alert" *ngIf="alertError">
+            {{errorContent}}
+          </div>
+          <div class="form-group">
+            <label for="eml">Email:</label>
+            <input type="email" class="form-control" id="eml" formControlName="userEmail" placeholder="Enter Email">
+            <mat-error *ngIf="isControlHasError('userEmail','required')">
+              <strong>Required* </strong>
+            </mat-error>
+            <mat-error *ngIf="isControlHasError('userEmail','email')">
+              <strong>invalid field </strong>
+            </mat-error>
+            <mat-error *ngIf="isControlHasError('userEmail','minlength')">
+              <strong> minimum field length is 3</strong>
+            </mat-error>
+            <mat-error *ngIf="isControlHasError('userEmail','maxlength')">
+              <strong> maximum field length is 320</strong>
+            </mat-error>
+            <span class="help-block hide-me"><small></small></span>
+          </div>
+          <div class="form-group">
+            <label for="pass">Password:</label>
+            <input type="password" class="form-control" id="pass" formControlName="userPassword" placeholder="Enter Password">
+            <mat-error *ngIf="isControlHasError('userPassword','required')">
+              <strong>Required* </strong>
+            </mat-error>
+            <mat-error *ngIf="isControlHasError('userPassword','email')">
+              <strong>invalid field </strong>
+            </mat-error>
+            <mat-error *ngIf="isControlHasError('userPassword','minlength')">
+              <strong> minimum field length is 3</strong>
+            </mat-error>
+            <mat-error *ngIf="isControlHasError('userPassword','maxlength')">
+              <strong> maximum field length is 320</strong>
+            </mat-error>
+            <span class="help-block hide-me"><small></small></span>
+          </div>
+          <div class="text-right">
+            <button type="button" class="btn btn-info login-button" (click)="submitForm()">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="btn" data-toggle="modal" data-target="#myNewCTMModel" id="openModal" #myNewCTMModel [hidden]="true"></button>
+<div class="modal fade" id="myNewCTMModel" role="dialog" data-toggle="modal" data-target="#myNewCTMModel">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Select Call Metrices Account</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body modal-padding">
+        <div class="page-panel selected-page" *ngFor="let account of accounts">
+          <div class="row">
+            <div class="col-10">
+              <div class="box">
+                <img class="mr-2" src="assets/media/website.png">
+                <span style="">{{account.name}}</span>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="add-icon mar-top">
+                <a href="javascript:void(0);" class="add-me" (click)="getAccount(account.id, account.name)"><i class="fa fa-plus"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

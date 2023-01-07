@@ -1,0 +1,261 @@
+<div class="container-fluid pt-4">
+  <div class="row">
+    <div class="col-6 mb-4">
+      <h3>Form Builder Settings</h3>
+    </div>
+    <div class="col-6 mb-4 text-right">
+        <button id="add_iframe_button" class="btn btn-iframe"  data-toggle="modal" data-target="#myModal6"><i class="mr-2 fa fa-code"></i>Iframe</button>
+    </div>
+    <div class="col-md-12 col-lg-6 position-relative divider-after">
+      <div class="pt-1 position-relative field-expnd">
+        <div class="form-group w-100">
+          <label class="label-style" for="font_style">Font</label>
+          <select class="form-control input-form-fields" name="font_style" id="font_style" style="height: 45px !important; width: 100%;color: #999;background-color: #fff;" [(ngModel)]="formFontFamily" (change)="saveFont()">
+            <option value="nunito" selected>Nunito</option>
+            <option value="cursive">Cursive</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="monospace">Monospace</option>
+            <option value="sans-serif">Sans-serif</option>
+            <option value="Times New Roman">Times New Roman</option>
+          </select>
+        </div>
+        <div class="form-group w-100">
+          <label class="label-style" for="sort-review-by" style="font-size: 14px;">Select Option</label>
+          <select class="form-control input-form-fields" id="sort-review-by" style="height: 45px !important; width: 100%;color: #999;background-color: #fff;" [(ngModel)]="selectField" (change)="changeFields()">
+            <option value="1" selected>Form Fields</option>
+            <option value="2">Button</option>
+            <option value="3">Heading</option>
+            <option value="4">Add Custom Field</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-fields-options mb-3" *ngIf="customBox">
+        <div class="form-group w-100">
+          <label class="label-style" for="select-custom-field" style="font-size: 14px;">Select Type</label>
+          <select class="form-control input-form-fields field-expnd" id="select-custom-field" style="height: 45px !important;color: #999;background-color: #fff;" [(ngModel)]="fieldType">
+            <option value="text" selected>Text</option>
+            <option value="number">Number</option>
+          </select>
+        </div>
+        <div class="pt-1 position-relative field-expnd mb-2">
+          <label class="label-style" for="selected-type-input" style="font-size: 14px;">Add Field Name</label>
+          <input class="form-control input-form-fields" id="selected-type-input" type="text" [(ngModel)]="fieldName">
+        </div>
+        <div class="pt-1 position-relative field-expnd mb-2">
+          <label class="label-style" for="selected-type-input-1" style="font-size: 14px;">Add Field Placeholder</label>
+          <input class="form-control input-form-fields" id="selected-type-input-1" type="text" [(ngModel)]="fieldPlaceholder">
+        </div>
+
+        <div class="form-group w-100">
+          <label class="label-style" for="selected-type-input-2" style="font-size: 14px;">Select Label</label>
+          <select class="form-control input-form-fields field-expnd" id="selected-type-input-2" style="height: 45px !important;color: #999;background-color: #fff;" [(ngModel)]="fieldLabel">
+            <option value="lnr lnr-user" selected>Name</option>
+            <option value="lnr lnr-envelope">Email</option>
+            <option value="lnr lnr-phone-handset">Phone</option>
+            <option value="lnr lnr-keyboard">Message</option>
+          </select>
+        </div>
+
+        <div class="my-3">
+          <button id="save_it_now" type="button" class="btn btn-green float-right padding-btn margin-right-side" (click)="addField()"><i class="fas fa-check mr-2"></i><span>Add Field</span></button>
+        </div>
+      </div>
+      <div class="form-fields-options mb-3" *ngIf="fieldBox">
+        <div class="pt-1 position-relative field-expnd mb-2">
+          <label class="label-style" for="inputdefault" style="font-size: 14px;">Width (%)</label>
+          <input class="form-control input-form-fields" id="inputdefault" type="number" [(ngModel)]="fieldWidth" [value]="fieldWidth" style="height: 45px !important; width: 100%;color: #999;background-color: #fff;">
+        </div>
+        <div class="pt-1 position-relative field-expnd mb-2">
+          <label class="label-style" for="inputdefault1" style="font-size: 14px;">Height (px)</label>
+          <input class="form-control input-form-fields" id="inputdefault1" type="number" [(ngModel)]="fieldHeight" [value]="fieldHeight" style="height: 45px !important; width: 100%;color: #999;background-color: #fff;">
+        </div>
+        <div class="pt-1 position-relative field-expnd mb-2">
+          <label class="label-style" for="inputdefault2" style="font-size: 14px;">Font Size (px)</label>
+          <input class="form-control input-form-fields" id="inputdefault2" [(ngModel)]="fieldFontSize" [value]="fieldFontSize" type="number" style="height: 45px !important; width: 100%;color: #999;background-color: #fff;">
+        </div>
+        <div class="pt-1 position-relative field-expnd mb-2">
+          <label class="label-style" for="favcolor" style="font-size: 14px;">Font Color</label><br />
+          <input type="text" class="settings-input form-control input-form-fields" [value]="fieldFontColor" style="height: 45px !important; width: 100%;color: #999;background-color: #fff;">
+          <input type="color" id="favcolor" name="top_background_color" [(ngModel)]="fieldFontColor" class="color-changing-btn">
+        </div>
+        <div class="pt-1 position-relative field-expnd mb-2">
+          <label class="label-style" for="favcolor1" style="font-size: 14px;">Label Color</label><br />
+          <input type="text" class="settings-input form-control input-form-fields" [value]="fieldLabelFontColor" style="height: 45px !important; width: 100%;color: #999;background-color: #fff;">
+          <input type="color" id="favcolor1" name="top_background_color" [(ngModel)]="fieldLabelFontColor" class="color-changing-btn">
+        </div>
+        <div class="pt-1 position-relative field-expnd mb-2">
+          <label class="label-style" for="inputdefault3" style="font-size: 14px;">Label Font Size (px)</label>
+          <input class="form-control input-form-fields" id="inputdefault3" [(ngModel)]="fieldLabelFontSize" [value]="fieldLabelFontSize" type="number" style="height: 45px !important; width: 100%;color: #999;background-color: #fff;">
+        </div>
+        <div class="my-3">
+          <button id="save_it" type="button" class="btn btn-green float-right padding-btn margin-right-side" (click)="saveForm()"><i class="fas fa-check mr-2"></i><span>Save Form</span></button>
+        </div>
+      </div>
+
+      <div class="form-button-options mb-3" *ngIf="btnBox">
+        <div class="pt-1 position-relative field-expnd mb-2">
+          <label class="label-style" for="btnclr1" style="font-size: 14px;">Background Color</label><br />
+          <input type="text" class="settings-input form-control input-form-fields" [value]="btnBackgroundColor" style="height: 45px !important; width: 100%;color: #999;background-color: #fff;">
+          <input type="color" id="btnclr1" name="top_background_color" [(ngModel)]="btnBackgroundColor" class="color-changing-btn">
+        </div>
+        <div class="pt-1 position-relative field-expnd mb-2">
+          <label class="label-style" for="btnclr2" style="font-size: 14px;">Border Color</label><br />
+          <input type="text" class="settings-input form-control input-form-fields" [value]="btnBorderColor" style="height: 45px !important; width: 100%;color: #999;background-color: #fff;">
+          <input type="color" id="btnclr2" name="top_background_color" [(ngModel)]="btnBorderColor" class="color-changing-btn">
+        </div>
+        <div class="pt-1 position-relative field-expnd mb-2">
+          <label class="label-style" for="inputdefault4" style="font-size: 14px;">Font Size (px)</label>
+          <input class="form-control input-form-fields" id="inputdefault4" [(ngModel)]="btnFontSize" [value]="btnFontSize" type="number" style="height: 45px !important; width: 100%;color: #999;background-color: #fff;">
+        </div>
+        <div class="pt-1 position-relative field-expnd mb-2">
+          <label class="label-style" for="btnclr3" style="font-size: 14px;">Font Color</label><br />
+          <input type="text" class="settings-input form-control input-form-fields" [value]="btnFontColor" style="height: 45px !important; width: 100%;color: #999;background-color: #fff;">
+          <input type="color" id="btnclr3" name="top_background_color" [(ngModel)]="btnFontColor"  class="color-changing-btn">
+        </div>
+        <div class="pt-1 position-relative field-expnd mb-2">
+          <label class="label-style" for="inputdefault-btn" style="font-size: 14px;">Width (px)</label>
+          <input class="form-control input-form-fields" id="inputdefault-btn" [(ngModel)]="btnWidth" [value]="btnWidth" type="number" style="height: 45px !important; width: 100%;color: #999;background-color: #fff;">
+        </div>
+        <div class="pt-1 position-relative field-expnd mb-2">
+          <label class="label-style" for="inputdefault-btn1" style="font-size: 14px;">Height (px)</label>
+          <input class="form-control input-form-fields" id="inputdefault-btn1" [(ngModel)]="btnHeight" [value]="btnHeight" type="number" style="height: 45px !important; width: 100%;color: #999;background-color: #fff;">
+        </div>
+        <div class="my-3">
+          <button id="save_it_2" type="button" class="btn btn-green float-right padding-btn margin-right-side" (click)="saveButton()"><i class="fas fa-check mr-2"></i><span>Save Button</span></button>
+        </div>
+      </div>
+      <div class="form-heading-options mb-3" *ngIf="headBox">
+        <div class="pt-1 position-relative field-expnd mb-2">
+          <label class="label-style" for="heading1" style="font-size: 14px;">Enter Custom Heading</label>
+          <input class="form-control input-form-fields" id="heading1" type="text" [(ngModel)]="headText" [value]="headText" style="height: 45px !important; width: 100%;color: #999;background-color: #fff;">
+        </div>
+        <div class="pt-1 position-relative field-expnd mb-2">
+          <label class="label-style" for="heading2" style="font-size: 14px;">Font Size (px)</label>
+          <input class="form-control input-form-fields" id="heading2" type="number" [(ngModel)]="headFontSize" [value]="headFontSize" style="height: 45px !important; width: 100%;color: #999;background-color: #fff;">
+        </div>
+        <div class="pt-1 position-relative field-expnd mb-2">
+          <label class="label-style" for="heading3" style="font-size: 14px;">Font Color</label><br />
+          <input type="text" class="settings-input form-control input-form-fields" [value]="headingColor" style="height: 45px !important; width: 100%;color: #999;background-color: #fff;">
+          <input type="color" id="heading3" name="top_background_color" class="color-changing-btn" [(ngModel)]="headingColor">
+        </div>
+        <div class="my-3">
+          <button id="save_it_3" type="button" class="btn btn-green float-right padding-btn margin-right-side" (click)="saveHead()"><i class="fas fa-check mr-2"></i><span>Save Heading</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-lg-6 pt-1">
+      <div class="container-contact100">
+        <div class="wrap-contact100">
+          <form class="contact100-form validate-form">
+            <span class="contact100-form-title" [style.fontFamily]="formFontFamily" [style.fontSize]="headFontSize + 'px'" [style]="{color: headingColor}">
+              {{headText}}
+            </span>
+            <div class="wrap-input100 validate-input" data-validate="First Name is required">
+              <input class="input100" id="fname" type="text" name="fname" placeholder="First Name" [style.fontFamily]="formFontFamily" [style]="{height: fieldHeight + 'px', width: fieldWidth + '%', color: fieldFontColor}" [style.fontSize]="fieldFontSize + 'px'">
+              <label class="label-input100" for="fname" [style.fontSize]="fieldLabelFontSize + 'px'" [style.color]="fieldLabelFontColor">
+                <span class="lnr lnr-user"></span>
+              </label>
+            </div>
+            <div class="wrap-input100 test validate-input" data-validate="Last Name is required" id="test" *ngIf="lastName">
+              <input class="input100 remImage" id="lname" type="text" name="lname" placeholder="Last Name" [style.fontFamily]="formFontFamily" [style]="{height: fieldHeight + 'px', width: fieldWidth + '%', color: fieldFontColor}" [style.fontSize]="fieldFontSize + 'px'">
+              <img src="assets/media/field-delete.svg" style="width:40px;height:40px;" class="field-delete" (click)="deleteField(1, 'lastname')">
+              <label class="label-input100" for="lname" [style.fontSize]="fieldLabelFontSize + 'px'" [style.color]="fieldLabelFontColor">
+                <span class="lnr lnr-user"></span>
+              </label>
+            </div>
+
+            <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+              <input class="input100" id="email" type="email" name="email" placeholder="Email Address" [style.fontFamily]="formFontFamily" [style]="{height: fieldHeight + 'px', width: fieldWidth + '%', color: fieldFontColor}" [style.fontSize]="fieldFontSize + 'px'">
+              <label class="label-input100" for="email" [style.fontSize]="fieldLabelFontSize + 'px'" [style.color]="fieldLabelFontColor">
+                <span class="lnr lnr-envelope"></span>
+              </label>
+            </div>
+
+            <div class="wrap-input100 validate-input" data-validate = "Phone is required">
+              <input class="input100" id="phone" type="number" name="phone" placeholder="Phone" [style.fontFamily]="formFontFamily" [style]="{height: fieldHeight + 'px', width: fieldWidth + '%', color: fieldFontColor}" [style.fontSize]="fieldFontSize + 'px'">
+              <label class="label-input100" for="phone" [style.fontSize]="fieldLabelFontSize + 'px'" [style.color]="fieldLabelFontColor">
+                <span class="lnr lnr-phone-handset"></span>
+              </label>
+            </div>
+
+            <div class="wrap-input100 test validate-input" data-validate="Message is required"  id="test1" *ngIf="commentBox">
+              <textarea class="input100 remImage" id="comment" name="message" placeholder="Your Comment" [style.fontFamily]="formFontFamily" [style]="{color: fieldFontColor}" [style.fontSize]="fieldFontSize + 'px'"></textarea>
+              <img src="assets/media/field-delete.svg" style="width:40px;height:40px;" class="field-delete" (click)="deleteField(1, 'comment')">
+              <label class="label-input100" for="comment" [style.fontSize]="fieldLabelFontSize + 'px'" [style.color]="fieldLabelFontColor">
+                <span class="lnr lnr-keyboard"></span>
+              </label>
+            </div>
+
+            <div *ngIf="fieldsData.length !== 0">
+              <div class="wrap-input100 test validate-input" data-validate = "" *ngFor="let field of fieldsData" id="test">
+                  <input class="input100 remImage" [type]="field.field_type" [name]="field.field_name" [placeholder]="field.field_placeholder" [style.fontFamily]="formFontFamily" [style]="{height: fieldHeight + 'px', width: fieldWidth + '%', color: fieldFontColor}" [style.fontSize]="fieldFontSize + 'px'">
+                  <img src="assets/media/field-delete.svg" style="width:40px;height:40px;" class="field-delete" (click)="deleteCustomField(field.id)">
+                  <label class="label-input100" for="phone" [style.fontSize]="fieldLabelFontSize + 'px'" [style.color]="fieldLabelFontColor">
+                    <span [class]="field.label"></span>
+                  </label>
+              </div>
+            </div>
+
+            <div class="container-contact100-form-btn justify-content-center align-items-center">
+              <div class="wrap-contact100-form-btn">
+                <button class="contact100-form-btn" [style.fontFamily]="formFontFamily" [style]="{height: btnHeight + 'px', width: btnWidth + 'px', color: btnFontColor}" [style.fontSize]="btnFontSize + 'px'" [style.background]="btnBackgroundColor" [style.borderColor]="btnBorderColor" disabled>
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="dropDownSelect1"></div>
+    </div>
+  </div>
+</div>
+
+<div class="pb-5"></div>
+
+
+<!--/////////////////////////////////////-->
+<!--////////////Modal 6 /////////////////-->
+<!--/////////////////////////////////////-->
+<div class="modal fade" id="myModal6" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label class="modal-6-lbl">Copy the iframe Embedded Code:</label>
+            <br>
+            <div style="border: 1px solid #e3e3e3;padding: 5px;">
+               <span style="color:brown">
+                 <span style="color:mediumblue">&lt;</span>iframe
+                 <span style="color:red">
+                 src<span style="color:mediumblue">
+                 ="{{iURL}}"</span></span>
+                  <span style="color:brown">
+                    style=<span style="color:mediumblue">"width: 100%;height: 100vh;"</span>
+                    <span style="color: brown"> frameborder=</span><span style="color: mediumblue">"0"</span>
+                    <span style="color: brown"> scrolling=</span><span style="color: mediumblue">"no"</span>
+                    <span style="color: brown"> allowfullscreen</span>
+                  </span>
+                    <span style="color:mediumblue">&gt;</span>
+                  </span>
+              <span style="color:brown">
+                  <span style="color:mediumblue">&lt;</span>/iframe<span style="color:mediumblue">&gt;</span>
+                </span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light btn-back" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--/////////////////////////////////////-->
+<!--////////////Modal 6 End/////////////////-->
+<!--/////////////////////////////////////-->

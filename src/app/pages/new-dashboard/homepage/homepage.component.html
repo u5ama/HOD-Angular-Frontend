@@ -1,0 +1,871 @@
+<!--////////////////////////////////////////////////////-->
+<!--////////////////////////////////////////////////////-->
+<!--////////////////////////////////////////////////////-->
+<div class="container-fluid font-family user-info-padding-frm-top">
+  <div class="row ">
+    <div class="col-12">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><img class="mr-2" src="assets/media/welcome-home.png" alt="">Home</li>
+          <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="col-12 pb-2">
+      <div class="d-flex align-items-center">
+        <div class="mr-4">
+          <h5 class="user-name">Hello {{userName}}</h5>
+        </div>
+        <div>
+          <img class="hi-user" src="assets/media/hi-user.png" alt="">
+        </div>
+      </div>
+      <p class="congrats-msg">Congratulations! You have done 0% more sales today</p>
+    </div>
+  </div>
+</div>
+<!--////////////////////////////////////////////////////-->
+<!--////////////////////////////////////////////////////-->
+<!--////////////////////////////////////////////////////-->
+<div class="container-fluid pb-5 font-family">
+  <!--  <div class="card-columns">-->
+  <p class="mb-3 summary">Summary</p>
+  <div class="row">
+    <div class="col-12 col-xl-9">
+      <div class="row">
+<!--        // <div class="col-12 col-md-6 col-xl-4 pb-4">-->
+        <div class="col-12 col-sm-6 col-lg-4 pb-4">
+
+<!--/////////////////////////////////////////////////////////-->
+<!--////////////////////////Widget 1/////////////////////////-->
+<!--/////////////////////////////////////////////////////////-->
+          <div class="card bg-color shadow1 card-height">
+            <div class="card-body text-center position-relative w-100 h-100 card1-body-padding">
+              <img src="assets/media/wid1-img1.png" class="position-absolute img-align-left" alt="">
+              <img src="assets/media/wid1-img2.png" class="position-absolute img-align-right" alt="">
+              <div class="align-items-center align-items-center justify-content-center total-leads-top-padding leads-padding-bottom">
+                <p class="card-text text-white total-leads-text">Total Leads</p>
+              </div>
+              <div class="d-flex justify-content-center align-items-center">
+                <div class="d-flex align-self-start img-arrow-padding-right seo-arrow-div-padding-bottom" *ngIf="LeadsPercent > 0">
+                  <img class="arrow-dimensions" src="assets/media/arrow-green.png" alt="">
+                </div>
+                <div class="d-flex align-self-start img-arrow-padding-right seo-arrow-div-padding-bottom">
+                  <img class="arrow-dimensions" src="assets/media/arrow-red.png" alt="" *ngIf="LeadsPercent < 0">
+                </div>
+                <div>
+                  <h3 class="text-white h3-font-size">{{totalLeads}}</h3>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center total-leads-padding-btm">
+                <div  class="img-arrow-padding-right" *ngIf="LeadsPercent > 0">
+                  <p class="text-white p-percent-value-green">+{{LeadsPercent | number:'1.0-1'}}%</p>
+                </div>
+                <div  class="img-arrow-padding-right" *ngIf="LeadsPercent == 0">
+                  <p class="text-white p-percent-value-green">{{LeadsPercent | number:'1.0-1'}}%</p>
+                </div>
+                <div  class="img-arrow-padding-right" *ngIf="LeadsPercent < 0">
+                  <p class="text-white p-percent-value-red">{{LeadsPercent | number:'1.0-1'}}%</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <p class="text-white h5-fonts-size total-leads-this-month">This month</p>
+                </div>
+              </div>
+<!--              <app-leads></app-leads>-->
+              <div class="total-leads-height total-leads-sml-height">
+                <app-total-leads-graph></app-total-leads-graph>
+              </div>
+            </div>
+          </div>
+        </div>
+<!--        <div class="col-12 col-md-6 col-xl-4 pb-4">-->
+        <div class="col-12 col-sm-6 col-lg-4 pb-4">
+          <!--/////////////////////////////////////////////////////////-->
+          <!--////////////////////////Widget 2/////////////////////////-->
+          <!--/////////////////////////////////////////////////////////-->
+          <div class="card bg-color1 shadow2 seo-imp-card-padding card-height">
+            <div class="card-body seo-padding">
+              <p class="card-text seo-imp-text">SEO Ranking Improvements</p>
+              <div class="d-flex align-items-center seo-rank-improvement-arrow">
+                <div class="d-flex align-self-start seo-arrow-padding-rite seo-arrow-div-padding-bottom" *ngIf="keywordPercent > 0">
+                  <img class="arrow-dimensions" src="assets/media/arrow-green.png" alt="">
+                </div>
+                <div class="d-flex align-self-start seo-arrow-padding-rite seo-arrow-div-padding-bottom" *ngIf="keywordPercent < 0">
+                  <img class="arrow-dimensions" src="assets/media/arrow-red.png" alt="">
+                </div>
+                <div>
+                  <h3 class="seo-rank-h3 h3-color-green" *ngIf="keywordTotal > 0">+{{keywordTotal}}</h3>
+                  <h3 class="seo-rank-h3 h3-color-green" *ngIf="keywordTotal == 0">{{keywordTotal}}</h3>
+                  <h3 class="seo-rank-h3 h3-color-red" *ngIf="keywordTotal < 0">{{keywordTotal}}</h3>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="img-arrow-padding-right" *ngIf="keywordPercent > 0">
+                  <p class="text-white p-percent-value-green">+{{keywordPercent | number:'1.0-1'}}%</p>
+                </div>
+                <div class="img-arrow-padding-right" *ngIf="keywordPercent == 0">
+                  <p class="text-white p-percent-value-green">{{keywordPercent | number:'1.0-1'}}%</p>
+                </div>
+                <div class="img-arrow-padding-right" *ngIf="keywordPercent < 0">
+                  <p class="text-white p-percent-value-red">{{keywordPercent | number:'1.0-1'}}%</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <p class="h5-fonts-size total-leads-this-month">Since last month</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<!--        <div class="col-12 col-md-6 col-xl-4 pb-4">-->
+        <div class="col-12 col-sm-6 col-lg-4 pb-4">
+          <!--/////////////////////////////////////////////////////////-->
+          <!--////////////////////////Widget 3/////////////////////////-->
+          <!--/////////////////////////////////////////////////////////-->
+          <div class="card bg-color1 shadow3 tot-review-pad card-alert card-height">
+            <div id="overlay" style="display: none">
+              <div class="d-flex align-items-center flex-column h-100 justify-content-center">
+                <div class="pb-3">
+                  <img src="assets/media/error.png" alt="">
+                </div>
+                <div>
+                  <p class="ads-disconnect">Reviews Not Detected</p>
+                </div>
+                <div>
+                  <button class="btn btn-reconnect" type="button" data-toggle="modal" data-target="#google-ads-oauth">Click to Connect</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-body card-padding">
+              <div class="d-flex total-review-margin-bottom total-review-padding-bottom">
+                <div class="d-flex align-items-center">
+                  <p class="card-text total-review-font-size total-review-text p-color">Total Reviews</p>
+                </div>
+                <div class="ml-auto background-style position-relative overflow-hidden">
+                  <h1 class="float-left heading-padding-right">{{overAllRating | number:'1.0-1' }}</h1>
+                  <p class="small-scrn-size p-dimensions">Overall Rating</p>
+                  <span class="rating">
+                    <span class="rating-value" [style]="{'width': overAllRating*20 +'%'}"></span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center total-review-arrow-row-padding">
+                <div class="d-flex align-self-start seo-arrow-padding-rite seo-arrow-div-padding-bottom" *ngIf="ReviewsPercent < 0">
+                  <img class="arrow-dimensions" src="assets/media/arrow-red.png" alt="">
+                </div>
+                <div class="d-flex align-self-start seo-arrow-padding-rite seo-arrow-div-padding-bottom" *ngIf="ReviewsPercent > 0">
+                  <img class="arrow-dimensions" src="assets/media/arrow-green.png" alt="">
+                </div>
+                <div>
+                  <h3 class="seo-rank-h3 h3-color-red" *ngIf="publicReviews < 0">{{publicReviews}}</h3>
+                  <h3 class="seo-rank-h3 h3-color-green" *ngIf="publicReviews == 0">{{publicReviews}}</h3>
+                  <h3 class="seo-rank-h3 h3-color-green" *ngIf="publicReviews > 0">+{{publicReviews}}</h3>
+                </div>
+              </div>
+              <div class="d-flex total-review-stat-padding-bottom">
+                <div class="img-arrow-padding-right">
+                  <p class="text-white p-percent-value-green" *ngIf="ReviewsPercent > 0">+{{ReviewsPercent | number:'1.0-1'}}%</p>
+                  <p class="text-white p-percent-value-green" *ngIf="ReviewsPercent == 0">{{ReviewsPercent | number:'1.0-1'}}%</p>
+                  <p class="text-white p-percent-value-red" *ngIf="ReviewsPercent < 0">{{ReviewsPercent | number:'1.0-1'}}%</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <p class="h5-fonts-size">Since last month</p>
+                </div>
+              </div>
+<!--              <app-yellow-graph></app-yellow-graph>-->
+              <div class="total-reviews-height total-leads-p1440-height">
+                <app-total-reviews-graph></app-total-reviews-graph>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--      </div>-->
+
+        <!--     <div class="row pt-4">-->
+<!--        <div class="col-12 col-md-6 col-xl-4">-->
+        <div class="col-12 col-sm-6 col-lg-4 pb-4 pb-xl-0">
+          <!--/////////////////////////////////////////////////////////-->
+          <!--////////////////////////Widget 4/////////////////////////-->
+          <!--/////////////////////////////////////////////////////////-->
+          <div class="card bg-color1 shadow4 seo-imp-card-padding card-height">
+            <div id="overlay" *ngIf="notConnectedAds">
+              <div class="d-flex align-items-center flex-column h-100 justify-content-center">
+                <div class="pb-3">
+                  <img src="assets/media/error.png" alt="">
+                </div>
+                <div>
+                  <p class="ads-disconnect">Ads Not Detected</p>
+                </div>
+                <div>
+                  <button class="btn btn-reconnect" type="button" data-toggle="modal" data-target="#google-ads-oauth">Click to Connect</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-body card-body-padding-sml-scrn">
+              <div class="d-flex">
+                <div class="arrow-num-pad-btm">
+                  <p class="card-text total-review-text dimensions-resp p-color">Ad Spend</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center arrow-num-pad-btm arrow-num-pad-top dimensions-resp">
+                <div class="d-flex align-self-start img-arrow-padding-right seo-arrow-div-padding-bottom" *ngIf="AdsSpendPercent > 0">
+                  <img class="arrow-dimensions" src="assets/media/arrow-green.png" alt="">
+                </div>
+                <div class="d-flex align-self-start img-arrow-padding-right seo-arrow-div-padding-bottom" *ngIf="AdsSpendPercent < 0">
+                  <img class="arrow-dimensions" src="assets/media/arrow-red.png" alt="">
+                </div>
+                <div>
+                  <h3 class="seo-rank-h3 h3-color-green">${{AdsSpendTotal | number:'1.0-1'}}</h3>
+                </div>
+              </div>
+              <div class="d-flex padding-bottom spend-pad-1440-btm">
+                <div class="img-arrow-padding-right" *ngIf="AdsSpendPercent > 0">
+                  <p class="text-white p-percent-value-green">+{{AdsSpendPercent | number:'1.0-1'}}%</p>
+                </div>
+                <div class="img-arrow-padding-right" *ngIf="AdsSpendPercent < 0">
+                  <p class="text-white p-percent-value-red">{{AdsSpendPercent | number:'1.0-1'}}%</p>
+                </div>
+                <div class="img-arrow-padding-right" *ngIf="AdsSpendPercent === 0">
+                  <p class="text-white p-percent-value-red">{{AdsSpendPercent | number:'1.0-1'}}%</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <p class="h5-fonts-size">Since last month</p>
+                </div>
+              </div>
+              <div class="ad-spend-height chart-padding-top chart-height-at-sml-scrn">
+                <app-ad-spend-graph></app-ad-spend-graph>
+              </div>
+
+<!--              <app-yellow-graph-one></app-yellow-graph-one>-->
+            </div>
+          </div>
+        </div>
+<!--        <div class="col-12 col-md-6 col-xl-4">-->
+        <div class="col-12 col-sm-6 col-lg-4 pb-4 pb-xl-0">
+          <!--/////////////////////////////////////////////////////////-->
+          <!--////////////////////////Widget 5/////////////////////////-->
+          <!--/////////////////////////////////////////////////////////-->
+          <div class="card bg-color2 shadow5 seo-imp-card-padding card-height">
+            <div id="overlay" *ngIf="notConnectedAds">
+              <div class="d-flex align-items-center flex-column h-100 justify-content-center">
+                <div class="pb-3">
+                  <img src="assets/media/error.png" alt="">
+                </div>
+                <div>
+                  <p class="ads-disconnect">Ads Not Detected</p>
+                </div>
+                <div>
+                  <button class="btn btn-reconnect" type="button" data-toggle="modal" data-target="#google-ads-oauth">Click to Connect</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <img src="assets/media/return.png" class="position-absolute reward-img-align-right" alt="">
+              <div class="d-flex">
+                <div class="arrow-num-pad-btm revenue-sml-mar-btm">
+                  <p class="card-text total-review-text h3-color-blue dimensions-resp">Revenue</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center revenue-arrow-pad-btm arrow-num-pad-top dimensions-resp">
+                <div class="d-flex align-self-start img-arrow-padding-right seo-arrow-div-padding-bottom" *ngIf="RevenuePercent > 0">
+                  <img class="arrow-dimensions" src="assets/media/arrow-blue.png" alt="">
+                </div>
+                <div class="d-flex align-self-start img-arrow-padding-right seo-arrow-div-padding-bottom" *ngIf="RevenuePercent < 0">
+                  <img class="arrow-dimensions" src="assets/media/arrow-red.png" alt="">
+                </div>
+                <div>
+                  <h3 class="h3-font-size h3-color-blue">${{RevenueTotal}}</h3>
+                </div>
+              </div>
+              <div class="d-flex padding-bottom">
+                <div class="img-arrow-padding-right" *ngIf="RevenuePercent > 0">
+                  <p class="text-white p-percent-value-green">+{{RevenuePercent | number:'1.0-1'}}%</p>
+                </div>
+                <div class="img-arrow-padding-right" *ngIf="RevenuePercent < 0">
+                  <p class="text-white p-percent-value-red">{{RevenuePercent | number:'1.0-1'}}%</p>
+                </div>
+                <div class="img-arrow-padding-right" *ngIf="RevenuePercent == 0">
+                  <p class="text-white p-percent-value-red">{{RevenuePercent | number:'1.0-1'}}%</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <p class="revenue-month-date-color h5-fonts-size">Month to Date</p>
+                </div>
+              </div>
+              <div class="revenue-chart-height">
+                <app-revenue-graph></app-revenue-graph>
+              </div>
+
+<!--              <div class="d-flex">-->
+<!--                <div>-->
+<!--                  <img class="w-100 graph-bar-height" src="assets/media/graph1-bar.png" alt="">-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="d-flex">-->
+<!--                <div>-->
+<!--                  <img class="w-100" src="assets/media/graph1-month.png" alt="">-->
+<!--                </div>-->
+<!--              </div>-->
+            </div>
+          </div>
+        </div>
+<!--        <div class="col-12 col-md-6 col-xl-4">-->
+        <div class="col-12 col-sm-6 col-lg-4 pb-4 pb-xl-0">
+          <!--/////////////////////////////////////////////////////////-->
+          <!--////////////////////////Widget 6/////////////////////////-->
+          <!--/////////////////////////////////////////////////////////-->
+          <div class="card bg-color1 shadow6 seo-imp-card-padding card-height">
+            <div id="overlay" *ngIf="notConnectedAds">
+              <div class="d-flex align-items-center flex-column h-100 justify-content-center">
+                <div class="pb-3">
+                  <img src="assets/media/error.png" alt="">
+                </div>
+                <div>
+                  <p class="ads-disconnect">Ads Not Detected</p>
+                </div>
+                <div>
+                  <button class="btn btn-reconnect" type="button" data-toggle="modal" data-target="#google-ads-oauth">Click to Connect</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-body card-body-padding-sml-scrn">
+              <div class="d-flex">
+                <div class="arrow-num-pad-btm">
+                  <p class="card-text total-review-text dimensions-resp p-color">Cost per lead</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center arrow-num-pad-btm arrow-num-pad-top dimensions-resp">
+                <div class="d-flex align-self-start img-arrow-padding-right seo-arrow-div-padding-bottom" *ngIf="CostLeadPercent > 0">
+                  <img class="arrow-dimensions" src="assets/media/arrow-green.png" alt="">
+                </div>
+                <div class="d-flex align-self-start img-arrow-padding-right seo-arrow-div-padding-bottom" *ngIf="CostLeadPercent < 0">
+                  <img class="arrow-dimensions" src="assets/media/arrow-red.png" alt="">
+                </div>
+                <div>
+                  <h3 class="seo-rank-h3 h3-color-green">${{CostLeadTotal | number:'1.0-1'}}</h3>
+                </div>
+              </div>
+              <div class="d-flex padding-bottom lead-pad-1440-btm">
+                <div class="img-arrow-padding-right" *ngIf="CostLeadPercent > 0">
+                  <p class="text-white p-percent-value-green">+{{CostLeadPercent | number:'1.0-1'}}%</p>
+                </div>
+                <div class="img-arrow-padding-right" *ngIf="CostLeadPercent < 0">
+                  <p class="text-white p-percent-value-red">{{CostLeadPercent | number:'1.0-1'}}%</p>
+                </div>
+                <div class="img-arrow-padding-right" *ngIf="CostLeadPercent == 0">
+                  <p class="text-white p-percent-value-red">{{CostLeadPercent | number:'1.0-1'}}%</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <p class="h5-fonts-size">Since last month</p>
+                </div>
+              </div>
+              <div class="cost-per-leads-height chart-padding-top chart-height-at-sml-scrn">
+                <app-cost-per-leads-graph></app-cost-per-leads-graph>
+              </div>
+
+              <!--              <app-yellow-graph-one></app-yellow-graph-one>-->
+            </div>
+          </div>
+        </div>
+<!--        //////////////////////////////////-->
+
+      </div>
+    </div>
+    <div class="col-12 col-xl-3">
+      <div class="card shadow7 hovercard h-100 client-success-manager-card">
+        <div class="cardheader align-items-center justify-content-center">
+          <div class="logo-padding-bottom">
+            <img class="logo-dimensions" alt="" src="assets/media/login-icon.png">
+          </div>
+          <div>
+            <p class="text-white success-manager">Your Client Success Manager</p>
+          </div>
+        </div>
+        <div class="avatar">
+
+          <img alt="" *ngIf="spImage" [src]="supportImage">
+
+          <img alt="" *ngIf="sampleImage" src="assets/media/login-person.png">
+        </div>
+        <div class="info padding-top-client-manager media-screen-padding">
+          <div class="title">
+            <h3 class="client-name">{{supportName}}</h3>
+          </div>
+          <div class="padding-bottom-question">Have a question?</div>
+        </div>
+        <div class="bottom">
+          <a [href]="'tel:'+supportPhone" class="btn btn-contact-green"><i class="fab fa-whatsapp pr-3"></i>Chat with Roy</a>
+        </div>
+        <div>
+          <a [href]="'mailto:'+supportEmail" class="btn btn-email-white"><i class="far fa-envelope pr-4"></i>Email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row py-5">
+    <div class="col-12 col-sm-6 col-xl-3">
+            <app-leads-graph></app-leads-graph>
+      </div>
+    <div class="col-3">
+      <div class="card hovercard h-100 shadow9 row-2-card-height">
+        <div class="card-header text-left bg-white">
+          <div class="d-flex">
+            <div>
+              <p class="text-muted mb-0 overview">Overview</p>
+            </div>
+            <div class="ml-auto">
+              <i class="fas fa-chevron-up"></i>
+            </div>
+          </div>
+          <h5 class="funnel-heading">Funnels</h5>
+        </div>
+        <div class="card-body funnel-graph-body">
+          <app-funnel-graph></app-funnel-graph>
+<!--          <app-reviews></app-reviews>-->
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-xl-6">
+      <div class="card hovercard h-100 shadow10 row-2-card-height">
+        <div class="card-header text-left card-header-setting">
+          <div class="d-flex">
+            <div>
+              <p class="text-muted mb-0 overview">Overview</p>
+            </div>
+            <div class="ml-auto">
+              <i class="fas fa-chevron-up"></i>
+            </div>
+          </div>
+          <h5 class="funnel-heading">SEO Rankings</h5>
+        </div>
+        <div class="card-body pb-5">
+          <div class="table-responsive table-shadow">
+            <table class="table table-borderless">
+              <thead class="table-header table-header-font-size">
+              <tr>
+                <th scope="col" class="sorting">Keyword</th>
+                <th scope="col">Google</th>
+                <th scope="col">Google Change</th>
+                <th scope="col" class="sorting">Google URL</th>
+              </tr>
+              </thead>
+              <tbody class="table-body table-row-font-size" *ngIf="keywords?.length != 0">
+                <tr *ngFor="let keyword of keywords">
+                  <td>{{keyword.keyword}}</td>
+                  <td>{{keyword.rank}}</td>
+                  <td>{{keyword.volume}}</td>
+                  <td>[home page]</td>
+                </tr>
+              </tbody>
+              <tr *ngIf="keywords?.length == 0" style="text-align: center">
+                <td class="td-font-size" colspan="4" class="no-data-available">No Keywords Found!</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row pb-5">
+    <div class="col-12 col-lg-4 col-xl-3">
+      <div class="row">
+        <div class="col-12 pb-4">
+          <div class="card shadow11">
+            <div class="social-media-card-header card-header text-left bg-white">
+              <div class="d-flex">
+                <div>
+                  <p class="text-muted mb-0 overview">Overview</p>
+                </div>
+                <div class="ml-auto">
+                  <i class="fas fa-chevron-up"></i>
+                </div>
+              </div>
+              <h5 class="funnel-heading">Social Media Followers</h5>
+            </div>
+            <div class="card-body">
+
+              <div class="d-flex justify-content-between align-items-center smf-row1-padding border-bottom social-media-fb-padding-1440">
+                <div class="d-flex align-items-center justify-content-center">
+<!--                  <i class="fb-bg fab fa-facebook-f text-center"></i>-->
+                  <img class="fb-icon" src="assets/media/fb-icon.png" alt="">
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                  <h5 class="social-media-follower-number-color font-weight-bold follower-num-1440p-size h5-fonts-size h5-sml-scrn-size mb-0">{{faceBookLikes}}</h5>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                  <p class="social media-followers-likes mb-0 likes-padding">Likes</p>
+                </div>
+                <div class="d-flex align-items-center justify-content-center" *ngIf="likesPercentage > 0">
+                  <p class="h3-color-green media-followers-percent-val font-weight-bold p-sml-scrn-size mb-0">+{{likesPercentage | number:'1.0-1'}}%</p>
+                </div>
+                <div class="d-flex align-items-center justify-content-center" *ngIf="likesPercentage < 0">
+                  <p class="h3-color-red media-followers-percent-val font-weight-bold p-sml-scrn-size mb-0">{{likesPercentage | number:'1.0-1'}}%</p>
+                </div>
+                <div  class="d-flex align-items-center justify-content-center" *ngIf="likesPercentage > 0">
+                  <img class="arrow-dimensions-social" src="assets/media/arrow-green.png" alt="">
+                </div>
+                <div  class="d-flex align-items-center justify-content-center" *ngIf="likesPercentage < 0">
+                  <img class="arrow-dimensions-social" src="assets/media/arrow-red.png" alt="">
+                </div>
+                <div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center smf-row2-padding border-bottom social-media-insta-padding-1440">
+                <div class="d-flex align-items-center justify-content-center">
+<!--                  <i class="insta-bg fab fa-instagram text-center"></i>-->
+                  <img class="insta-icon" src="assets/media/ig-icon.png" alt="">
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                  <h5 class="social-media-follower-number-color font-weight-bold follower-num-1440p-size h5-fonts-size mb-0">0</h5>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                  <p class="social media-followers-likes mb-0 followers-padding">Followers</p>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                  <p class="h3-color-red media-followers-percent-val font-weight-bold p-sml-scrn-size mb-0">0%</p>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                  <img class="arrow-dimensions-social" src="assets/media/arrow-red.png" alt="">
+                </div>
+                <div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-8 col-xl-9">
+      <div class="card shadow12 h-100">
+        <div class="card-header text-left card-header-setting">
+          <div class="d-flex">
+            <div>
+              <p class="text-muted mb-0 overview">Overview</p>
+            </div>
+            <div class="ml-auto">
+              <i class="fas fa-chevron-up"></i>
+            </div>
+          </div>
+          <h5 class="funnel-heading">Website Traffic Source</h5>
+        </div>
+        <div class="card-body">
+          <div class="row pb-4">
+            <div class="col-12 col-lg-3">
+              <div style="height: 100%;width: 100%;">
+                <app-website-traffic-source-doughnut></app-website-traffic-source-doughnut>
+              </div>
+            </div>
+            <div class="col-12 col-lg-9">
+              <app-website-traffic-source-graph></app-website-traffic-source-graph>
+<!--              <img class="w-100 h-100" src="assets/media/bars-month.png" alt="">-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row pb-5">
+    <div class="col-12">
+      <div class="card landing-status w-100 h-100 overflow-hidden shadow13 card-alert google-card">
+        <div id="overlay2" *ngIf="notConnectedAds">
+          <div class="d-flex align-items-center flex-column h-100 justify-content-center">
+            <div class="pb-3">
+              <img src="assets/media/error.png" alt="">
+            </div>
+            <div>
+              <p class="ads-disconnect2">Google Ads Not Connected</p>
+            </div>
+            <div>
+              <button class="btn btn-reconnect2" type="button" data-toggle="modal" data-target="#google-ads-oauth">Click to Connect</button>
+            </div>
+          </div>
+        </div>
+<!--        <div class="card-header text-left card-header-setting">-->
+<!--          <div class="d-flex">-->
+<!--            <div>-->
+<!--              <p class="text-muted mb-0">Overview</p>-->
+<!--            </div>-->
+<!--            <div class="ml-auto">-->
+<!--              <i class="fas fa-chevron-up"></i>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+        <div class="card-body">
+          <div class="d-flex">
+            <div>
+              <p class="text-muted mb-0 overview">Overview</p>
+            </div>
+            <div class="ml-auto">
+              <i class="fas fa-chevron-up"></i>
+            </div>
+          </div>
+          <div class="d-flex align-items-center flex-container">
+            <div class="google-img-right-space">
+              <img class="google-img-dimensions" src="assets/media/Google-logo.svg" alt="">
+            </div>
+            <div class="box-design box-bg-color shadow">
+              <p class="font_14">Conversions</p>
+              <h2 class="h3-color-red font-weight-bold google-no-size">{{AdsConversions}}</h2>
+            </div>
+            <div class="box-design box-design1 shadow">
+              <p class="font_14">Cost Per Conversion</p>
+              <h3 class="h3-yellow-clr google-no-size">${{costPer | number:'1.0-1'}}</h3>
+              <div class="d-flex align-items-center">
+                <div  *ngIf="CostPercent > 0">
+                  <img class="arrow-dimensions-social mr-2" src="assets/media/arrow-green.png" alt="">
+                </div>
+                <div  *ngIf="CostPercent < 0">
+                  <img class="arrow-dimensions-social mr-2" src="assets/media/arrow-red.png" alt="">
+                </div>
+                <div  *ngIf="CostPercent > 0">
+                  <p class="h3-color-green google-percent-stat mb-0">+{{CostPercent | number:'1.0-1'}}%</p>
+                </div>
+                <div *ngIf="CostPercent < 0">
+                  <p class="h3-color-red google-percent-stat mb-0">{{CostPercent | number:'1.0-1'}}%</p>
+                </div>
+              </div>
+            </div>
+            <div class="box-design box-design2 shadow">
+              <p class="text-white font_14">Search Impression Share(%)</p>
+              <h3 class="text-white google-no-size">{{shareImpression | number:'1.0-1'}}%</h3>
+              <div class="d-flex align-items-center">
+                <div>
+                  <img class="arrow-dimensions-social mr-2" src="assets/media/arrow-white.png" alt="">
+                </div>
+                <div>
+                  <p class="text-white google-percent-stat mb-0">0%</p>
+                </div>
+              </div>
+            </div>
+            <div class="box-design box-design3 shadow">
+              <p class="font_14">Clicks</p>
+              <h3 class="clicks-clr google-no-size">{{AdsClicks}}</h3>
+              <div class="d-flex align-items-center">
+                <div *ngIf="ClicksPercent < 0">
+                  <img class="arrow-dimensions-social mr-2" src="assets/media/arrow-red.png" alt="">
+                </div>
+                <div *ngIf="ClicksPercent > 0">
+                  <img class="arrow-dimensions-social mr-2" src="assets/media/arrow-green.png" alt="">
+                </div>
+                <div *ngIf="ClicksPercent < 0">
+                  <p class="h3-color-red google-percent-stat mb-0">{{ClicksPercent | number:'1.0-1'}}%</p>
+                </div>
+                <div *ngIf="ClicksPercent > 0">
+                  <p class="h3-color-green google-percent-stat mb-0">+{{ClicksPercent | number:'1.0-1'}}%</p>
+                </div>
+              </div>
+            </div>
+            <div class="box-design box-design3 shadow">
+              <p class="font_14">Impressions</p>
+              <h3 class="clicks-clr google-no-size">{{AdsImpressions}}</h3>
+              <div class="d-flex">
+                <div *ngIf="ImpressionsPercent < 0">
+                  <img class="arrow-dimensions-social mr-2" src="assets/media/arrow-red.png" alt="">
+                </div>
+                <div *ngIf="ImpressionsPercent > 0">
+                  <img class="arrow-dimensions-social mr-2" src="assets/media/arrow-green.png" alt="">
+                </div>
+                <div *ngIf="ImpressionsPercent < 0">
+                  <p class="h3-color-red google-percent-stat mb-0">{{ImpressionsPercent | number:'1.0-1'}}%</p>
+                </div>
+                <div *ngIf="ImpressionsPercent > 0">
+                  <p class="h3-color-green google-percent-stat mb-0">+{{ImpressionsPercent | number:'1.0-1'}}%</p>
+                </div>
+              </div>
+            </div>
+            <div class="box-design box-design4 shadow">
+              <p class="blue-color-text font_14">Ad Spend</p>
+              <h3 class="blue-color-text google-no-size">${{adsSpend | number:'1.0-1'}}</h3>
+              <div class="d-inline-block">
+                <p class="blue-color-text social">Prev Month ${{AdsSpendLastMonth}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2 col-xl-1">
+            </div>
+            <div class="col-12 col-xl-11 google-rank-graph">
+              <app-google-graph></app-google-graph>
+<!--              <img src="assets/media/fb-google-stat.png" class="w-100 pb-5" alt="">-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Google Ads-->
+  <div class="modal fade" id="google-ads-oauth">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="OAuth-modal-body text-center">
+            <div class="auth-logo">
+              <img src="assets/media/googleAdwords.jpg" alt="" style="height: 60px;width: 60px">
+              <h3 class="google-modal-h3">Sign In to Google Adwords</h3>
+            </div>
+            <div class="content">
+              <div>
+                <h4>Select an existing account or connect a new Google Account.</h4>
+              </div>
+              <div>
+                <ul class="list-group list-item-styling">
+                  <li class="list-group-item"><i class="fas fa-check mr-2"></i>Track your PPC campaigns from one place</li>
+                  <li class="list-group-item"><i class="fas fa-check mr-2"></i>Easily report on the performance of your campaigns</li>
+                </ul>
+              </div>
+              <div class="text-center py-3">
+                <button type="button" (click)="openGoogleAds()" class="btn btn-google-ads-green" data-toggle="modal" data-target="#google-analytics-oauth"><i class="fab fa-google mr-2" aria-hidden="true"></i>Sign in to Google Adwords</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myNewModel" id="openModal" #myNewModel [hidden]="true"></button>
+  <div class="modal fade" id="myNewModel" role="dialog" data-toggle="modal" data-target="#myNewModel">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Select Google Ads</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body modal-padding">
+          <div class="page-panel selected-page" *ngFor="let web of AdsWebs">
+            <div class="row">
+              <div class="col-10">
+                <div class="box">
+                  <img class="mr-2" src="assets/media/website.png">
+                  <span style="">{{web.name}}</span>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="add-icon mar-top">
+                  <a href="javascript:void(0);" class="add-me" (click)="getAdsWebProperty(web.id, web.name, web.refresh_token)"><i class="fa fa-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card landing-status w-100 h-100 overflow-hidden shadow14 card-alert fb-card">
+        <div id="overlay3">
+          <div class="d-flex align-items-center flex-column h-100 justify-content-center">
+            <div class="pb-3">
+              <img src="assets/media/error.png" alt="">
+            </div>
+            <div>
+              <p class="ads-disconnect3">Facebook Ads Disconnected</p>
+            </div>
+            <div>
+              <button class="btn btn-reconnect3" type="button">Click to Connect</button>
+            </div>
+          </div>
+        </div>
+<!--        <div class="card-header text-left card-header-setting">-->
+<!--          <div class="d-flex">-->
+<!--            <div>-->
+<!--              <p class="text-muted mb-0">Overview</p>-->
+<!--            </div>-->
+<!--            <div class="ml-auto">-->
+<!--              <i class="fas fa-chevron-up"></i>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+        <div class="card-body">
+          <div class="d-flex">
+            <div>
+              <p class="text-muted mb-0 overview">Overview</p>
+            </div>
+            <div class="ml-auto">
+              <i class="fas fa-chevron-up"></i>
+            </div>
+          </div>
+          <div class="d-flex justify-content-lg-start align-items-center flex-container">
+            <div class="fb-logo-pad-right">
+              <img class="fb-img-dimensions" src="assets/media/fb-logo.png" alt="">
+            </div>
+            <div class="box-design-fb box-bg-color shadow mr-4">
+              <p class="font_14">Conversions</p>
+              <h2 class="h3-color-red font-weight-bold google-no-size">10,020</h2>
+            </div>
+            <div class="box-design-fb box-design3 shadow mr-4">
+              <p class="font_14">Clicks</p>
+              <h3 class="clicks-clr google-no-size">3,222</h3>
+              <div class="d-flex align-items-center">
+                <div>
+                  <img class="arrow-dimensions-social mr-2" src="assets/media/arrow-green.png" alt="">
+                </div>
+                <div>
+                  <p class="h3-color-green google-percent-stat mb-0">+0.2%</p>
+                </div>
+              </div>
+            </div>
+            <div class="box-design-fb box-design1 shadow mr-4">
+              <div class="d-flex align-items-center">
+<!--                <div class="d-flex">-->
+                  <p class="font_14 mr-2">Engagements</p>
+                  <span class="font_15">(Last 30 days)</span>
+<!--                </div>-->
+<!--                <div class="d-flex">-->
+<!--                  <p></p>-->
+<!--                </div>-->
+              </div>
+
+              <h3 class="h3-yellow-clr google-no-size">3,616</h3>
+              <div class="d-flex align-items-center">
+                <div>
+                  <img class="arrow-dimensions-social mr-2" src="assets/media/arrow-green.png" alt="">
+                </div>
+                <div>
+                  <p class="h3-color-green google-percent-stat mb-0">+0.5%</p>
+                </div>
+              </div>
+            </div>
+            <div class="box-design-fb box-design4 shadow mr-4">
+              <p class="blue-color-text font_14">Ad Spend</p>
+              <h3 class="blue-color-text google-no-size">$146.25</h3>
+              <div class="d-inline-block">
+                <p class="blue-color-text social">Prev Month $11,999.23</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-xl-3 w-75">
+              <app-fb-progress-bars></app-fb-progress-bars>
+            </div>
+            <div class="col-12 col-xl-9 fb-graph-right-padding">
+              <app-fb-graph></app-fb-graph>
+<!--              <img src="assets/media/fb-google-stat.png" class="w-100 pb-5" alt="">-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row pt-5">
+    <div class="col-12">
+      <div class="card landing-status w-100 h-100 overflow-hidden shadow15">
+        <div class="card-body">
+          <p class="agenda-style">Agenda This Month</p>
+          <app-appointment-calender></app-appointment-calender>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+/*.app-loading {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+  background: transparent;
+}*/
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: opacity 0.3s linear;
+  opacity: 0.7;
+}
+
+/*.app-loading {*/
+/*  position: absolute;*/
+/*  z-index: 99999;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  height: 100vh;*/
+/*  width: 100%;*/
+/*  background: white;*/
+/*}*/
+/*@keyframes fullScale{
+  from{
+    transform:scale(1);
+  }
+  to{
+    transform:scale(0);
+  }
+}*/
+/*
+.heart{
+  animation: beat .55s infinite alternate;
+  transform-origin: center;
+}
+!* Heart beat animation *!
+@keyframes beat{
+  to { transform: scale(1.4); }
+}
+*/
